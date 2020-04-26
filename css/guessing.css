@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body, .main{
+    height: 100%;
+}
+body{
+    background-color: rgb(52, 58, 65);
+}
+.main{
+    /* background-color: lightblue; */
+    display: none;
+}
+h1{
+    color: rgba(255, 148, 60, 0.884);
+}
+input[type="number"]{
+    width: 100px;
+    height: 40px;
+    font-size: 1.2em;
+    text-align: center;
+}
+input[type="submit"]{
+    background-color: rgba(255, 148, 60, 0.884);
+    width: 100px;
+    height: 50px;
+}
+
+@media only screen and (max-width: 400) {
+    .main{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .main{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        margin-top: 30px;
+        color: rgb(201, 234, 245);
+        font-size: 1.4em;
+    }
+    h1{
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: 2em;
+    }
+    #guess_count{
+        width: 200px;
+        background-color: rgb(94, 112, 136);
+        margin: auto;
+        margin-top: 15px;
+    }
+}
+@media only screen and (min-width: 501px) {
+    .main{
+        width: 500px;
+        margin: auto;
+        
+        text-align: center;
+        padding: 20px;
+    }
+    .gameArea{
+        width: 200px;
+        background-color: rgba(173, 216, 230, 0.829);
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.404);
+    }
+}
+@media only screen and (min-width: 650px) {
+    .main{
+        /* background-image: radial-gradient(rgba(0, 0, 0, 0.295), rgba(173, 216, 230, 0.103), rgba(173, 216, 230, 0.877)); */
+        width: 650px;
+        padding: 50px;
+        /* margin-top: 20px; */
+    }
+}
+@media only screen and (min-width: 767px) {
+    .main{
+        width: 90%;
+        /* margin-top: 50px; */
+    }
+}
