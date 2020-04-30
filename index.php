@@ -47,7 +47,7 @@ echo <<<_END
 
 </head>
 <body>
-
+<div id="wrapper">
 <h1 id="title">Come Play My Games!</h1>
 
     <div class="main">
@@ -73,12 +73,14 @@ echo <<<_END
             <p>Read and write true stories based on selected topics</p>
             <a class="go_to link" href="guessingGame.php">Tru Story</a>
         </div>
+
+        
 _END;
 
 
 echo <<<_END
     </div>
-    
+    </div>
 </body>
 </html>
 _END;

@@ -30,7 +30,7 @@ $(document).ready(function(){
 function validateNoun(field)
 {
     if (field == "") return "Noun was not entered.\n"
-    else if (/[^a-zA-Z]/.test(field)) return "Only letters can be used in Noun.\n"
+    else if (/[^\w]/.test(field)) return "Only letters can be used in Noun.\n"
     return ""
 }
 
@@ -48,7 +48,7 @@ function validateAdjective(field)
     return ""
 }
 
-function validatePronoun(field)
+function validateWord(field)
 {
     if (field == "") return "Pronoun was not entered.\n"
     else if (/[^a-zA-Z]/.test(field)) return "Only letters can be used in Pronoun.\n"
@@ -62,9 +62,9 @@ function validateAdverb(field)
     return ""
 }
 
-function validateFriend(field)
+function validateName(field)
 {
-    if (field == "") return "Friend was not entered.\n"
-    else if (/[^a-zA-Z]/.test(field)) return "Only letters can be used in Name.\n"
+    if (field == "") return "Name was not entered.\n"
+    else if (/[^a-z A-Z]/.test(field)) return "Only letters can be used in Name.\n"
     return ""
 }

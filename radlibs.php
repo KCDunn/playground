@@ -1,4 +1,5 @@
 <?php
+
 $output = "";
 
 // if( isset($_POST['noun']) && issett($_POST['verb']) && isset($_POST['adjective']) && isset($_POST['pronoun']) ) {
@@ -36,8 +37,7 @@ echo <<<_HEAD
 	<!-- <link href="https://fonts.googleapis.com/css?family=Capriola&display=swap" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
 
-
-    <link rel="stylesheet" type="text/css" href="css/radlibs.css">
+    <link rel="stylesheet" type="text/css" href="css/radlibs_select.css">
 	<script src="../jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -65,43 +65,59 @@ _HEAD;
 echo <<<_BODY
 <body>
 <div id="wrapper">
-
-<div class="main">
 <h1>Rad Libs</h1>
+<div id="main">
 
-<form method="post" action="radlibs.php">
-	<label>Type a Noun:</label>
-	<input type="text" name="noun">
-	<label>Type a Verb:</label>
-	<input type="text" name="verb">
-	<label>Type an Adjective:</label>
-	<input type="text" name="adjective">
-	<label>Type a Pronoun:</label>
-	<input type="text" name="pronoun">
-	<label>Type a Friends Name:</label>
-	<input type="text" name="friend">
-	<br>
-	<input type="submit" value="Lets do this!">
-</form>
+
+<div class="game_theme lit">
+            <h2>Literary Libs</h2>
+            <p>These Rad Libs are based on excerpts from popular literature.</p>
+            <ul>
+                <a href="literary-libs/harry_potter.php"><li>Harry Potter</li></a>
+                <a href="literary-libs/lotr.php"><li>Lord of the Rings</li></a>
+                <a href="literary-libs/moby_dick.php"><li>Moby Dick</li></a>
+                <a href="literary-libs/dracula.php"><li>Dracula</li></a>
+            </ul>
+        </div>
+        <div class="game_theme rock">
+            <h2>Rock Libs</h2>
+            <p>Check out these new lyrics to your favorite Hits, from yesterday and today!</p>
+            <ul>
+                <a href="rockin-libs/led_zepplin.php"><li>Led Zepplin</li></a>
+                <a href="rockin-libs/aerosmith.php"><li>Aerosmith</li></a>
+                <a href="rockin-libs/commodores.php"><li>Commodores</li></a>
+                <a href="#"><li>Rock Lib</li></a>
+                <a href="#"><li>Rock Lib</li></a>
+            </ul>
+            
+        </div>
+        <div class="game_theme inform">
+            <h2>Informative Libs</h2>
+            <p>Keep yourself informed on these most important topics!</p>
+            <ul>
+                <a href="informative-libs/weather-alert.php"><li>Severe Weather Alert</li></a>
+                <a href="informative-libs/pool-rules.php"><li>Pool Rules</li></a>
+                <a href="#"><li>Informative Lib</li></a>
+                <a href="#"><li>Informative Lib</li></a>
+            </ul>
+        </div>
+        <div class="game_theme other">
+            <h2>Other Libs</h2>
+            <p>Random stuff like jokes, and what not.</p>
+            <ul>
+                <a href="#"><li>Random Lib</li></a>
+                <a href="#"><li>Random Lib</li></a>
+                <a href="#"><li>Random Lib</li></a>
+                <a href="#"><li>Random Lib</li></a>
+            </ul>
+        </div>
 
 
 
 </div>
 
-<div id="output">
-<h3>Radlibs Output:</h3>
-<p>$output</p></div>
-<script>
-	smallArray = ['one', 'two', 'three'];
-	
-	
 
-	function displayItems() {
-		for (j = 0 ; j < displayItems.arguments.length ; ++j)
-		document.write("game " + j + ": " + diplayItems.arguments[j] + "<br>")
-	}
-	displayItems(smallArray);
-</script>
+
 </div>
 </body>
 </html>

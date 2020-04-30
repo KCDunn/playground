@@ -136,7 +136,9 @@ input[type=text] {
     color: lightblue;
 }
 
-
+.err{
+    color: rgb(255, 91, 41);
+}
 @media only screen and (max-width: 400) {
     form, #output, hr{
         width: 100%;
