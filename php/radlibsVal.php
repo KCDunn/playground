@@ -1,5 +1,6 @@
 <?php
 //PHP functions for form validation
+
 function validate_noun($field)
 {
 	if($field == "") return "Noun not entered.<br>";
@@ -66,7 +67,7 @@ function validate_name($field)
 	else if (strlen($field) > 55)
 		return "Names length is set to 55 characters max.<br>";
 }
-function validate_word($field)
+function validate_word($field) // may just use this for all other words except for nouns(which may have num or dash), and Names(which may have spaces).
 {
 	if($field == "") return "Name not entered.<br>";
 	else if (preg_match("/[^a-zA-Z]/", $field))
