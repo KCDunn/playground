@@ -1,0 +1,52 @@
+/*CSS reset settings here*/
+*/*{
+ margin: 0px;
+ padding: 0px;
+}
+*/
+body{
+  background-color: black;
+  margin: 0px;
+}
+div.row div{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+div.brick{
+  background-color: blue;
+  width: 20px;
+  height: 20px; 
+  margin: 0px;
+ padding: 0px;
+}
+div.coin{
+  background: url('coin.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+}
+div.empty{
+
+}
+div#pacman{
+  background: url('pacman.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+div#score{
+  border: 1px solid white;
+  width: 30px;
+  height: 20px;
+  color: white; 
+  padding: 7px;
+  text-align: center;
+}
