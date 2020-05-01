@@ -73,6 +73,16 @@ echo <<<_END
             <p>Read and write true stories based on selected topics</p>
             <a class="go_to link" href="guessingGame.php">Tru Story</a>
         </div>
+        <div class="game_item desktop">
+            <h2>Pacman</h2>
+            <p>A packman where everyone wins! (for desktop/laptop)</p>
+            <a class="go_to link" href="packman/">Packman</a>
+        </div>
+        <div class="game_item desktop">
+            <h2>1942</h2>
+            <p>Shoot down the enemy planes! (for desktop/laptop)</p>
+            <a class="go_to link" href="1942/">1942</a>
+        </div>
 
         
 _END;
