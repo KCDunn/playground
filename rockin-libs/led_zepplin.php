@@ -57,57 +57,14 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective']
         I'm gonna send ya<br>
         Back to $verb2-ling<br>
         A-way $adverb inside<br>
-        A-honey you need it<br>
+        A-$noun2 you need it<br>
         I'm gonna $adjective you my $noun3<br>
         I'm gonna $adjective you my $noun3<br>
         Want a whole lotta $noun1<br>
         Want a whole lotta $noun1<br>
         Want a whole lotta $noun1<br>
         Want a whole lotta $noun1<br>
-        You've been learning<br>
-        Um baby I been learning<br>
-        All them good times baby, baby<br>
-        I've been year-yearning<br>
-        A-way, way $adverb inside<br>
-        A-honey you need-ah<br>
-        I'm gonna $adjective you my $noun3, ah<br>
-        I'm gonna $adjective you my $noun3, ah oh<br>
-        Whole lotta $noun3<br>
-        Want a whole lotta $noun1<br>
-        Want a whole lotta $noun1<br>
-        Want a whole lotta $noun1<br>
-        You've been cooling<br>
-        And baby I've been $verb3-ing<br>
-        All the good times, baby<br>
-        I've been misusing<br>
-        A-way, way down inside<br>
-        I'm gonna $adjective ya my love<br>
-        I'm gonna $adjective ya every inch of my love<br>
-        I'm gonna $adjective ya my love<br>
-        Hey!<br>
-        Alright! Let's go!<br>
-        Whole lotta love<br>
-        Want a whole lotta $noun1<br>
-        Want a whole lotta $noun1<br>
-        Want a whole lotta $noun1<br>
-        Way down inside<br>
-        Woman, you need, yeah<br>
-        $noun3<br>
-        My, my, my, my<br>
-        My, my, my, my<br>
-        Lord<br>
-        Shake for me girl<br>
-        I wanna be your backdoor man<br>
-        Hey, oh, hey, oh<br>
-        Hey, oh, hey, oh<br>
-        Ooh<br>
-        Oh, oh, oh, oh<br>
-        Cool, my, my baby<br>
-        A-keep it cooling $noun2<br>
-        A-keep it cooling $noun2<br>
-        Ah-keep it cooling $noun2<br>
-        Ah-keep it cooling $noun2<br>
-        Ah-keep it cooling $noun2<br>";
+        <br>";
 
 		$formHide = "none";
 		$outputHide = "inline-block";

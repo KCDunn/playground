@@ -1,7 +1,7 @@
 <?php
 require_once('../php/radlibsVal.php');
-$noun1 = $verb1 = $noun2 = $verb2 = $noun3 = $verb3 = $adjective1 = $adjective2 = $adjective3 = $adverb = $writer = "";
-$fail_noun1 = $fail_noun2 = $fail_noun3 = $fail_verb1 = $fail_verb2 = $fail_verb3 = $fail_adj1 = $fail_adj2 = $fail_adj3 = $fail_adv = $fail_writer = "";
+$noun1 = $verb1 = $noun2 = $verb2 = $noun3 = $adjective1 = $adjective2 = "";
+$fail_noun1 = $fail_noun2 = $fail_noun3 = $fail_verb1 = $fail_verb2 = $fail_adj1 = $fail_adj2 = "";
 
 $output = "";
 $formHide = "inline-block";
@@ -13,12 +13,8 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
     $noun3 = fix_string($_POST['noun3']);
     $verb1 = fix_string($_POST['verb1']);
     $verb2 = fix_string($_POST['verb2']);
-    $verb3 = fix_string($_POST['verb3']);
     $adjective1 = fix_string($_POST['adjective1']);
     $adjective2 = fix_string($_POST['adjective2']);
-    $adjective3 = fix_string($_POST['adjective3']);
-	$adverb = fix_string($_POST['adverb']);
-	$writer = fix_string($_POST['writer']);
 
 
 	// if (isset($_POST['noun']))
@@ -39,27 +35,16 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
     $fail = validate_noun($noun3);
     $fail .= validate_word($verb1);
     $fail .= validate_word($verb2);
-    $fail .= validate_word($verb3);
     $fail .= validate_adjective($adjective1);
-    $fail .= validate_adjective($adjective2);
-    $fail .= validate_adjective($adjective2);
-	$fail .= validate_adverb($adverb);
-	$fail .= validate_name($writer);
 
-	// $fail_noun = validate_noun($noun);
-	// $fail_verb .= validate_verb($verb);
-	// $fail_adj .= validate_adjective($adjective);
-	// $fail_pron .= validate_pronoun($pronoun);
-	// $fail_adv .= validate_adverb($adverb);
-	// $fail_friend .= validate_friend($friend);
 
 	if ($fail == "")
 	{
-        $output = "The future of civilization rests in the fate of the One Ring, 
-        which has been lost for centuries. Powerful forces are unrelenting in their search for it. 
-        But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who 
-        inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes 
-        the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.";
+        $output = "<h2>Lord of the " . $noun3 . "</h2> <p>The $noun1 of civilization rests in the fate of the One $noun3, 
+        which has been $adjective1 for centuries. Powerful forces are unrelenting in their $verb2 for it. 
+        But fate has $verb1 it in the " . $noun2 . "s of a young Hobbit named Frodo Baggins, who 
+        inherits the $noun3 and steps into legend. A daunting task lies ahead for Frodo when he becomes 
+        the " . $noun3 . "-bearer - to destroy the One $noun3 in the fires of Mount Doom where it was forged.</p>";
 
 		$formHide = "none";
 		$outputHide = "inline-block";
@@ -73,12 +58,8 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
         $fail_noun3 = validate_noun($noun3);
         $fail_verb1 .= validate_word($verb1);
         $fail_verb2 .= validate_word($verb2);
-        $fail_verb3 .= validate_word($verb3);
         $fail_adj1 .= validate_adjective($adjective1);
         $fail_adj2 .= validate_adjective($adjective2);
-        $fail_adj3 .= validate_adjective($adjective3);
-		$fail_adv .= validate_adverb($adverb);
-		$fail_writer .= validate_name($writer);
 	}
 }
 
@@ -154,12 +135,8 @@ echo <<<_HEAD
             fail = validateNoun(form.noun3.value)
             fail += validateVerb(form.verb1.value)
             fail += validateVerb(form.verb2.value)
-            fail += validateVerb(form.verb3.value)
             fail += validateAdjective(form.adjective1.value)
             fail += validateAdjective(form.adjective2.value)
-            fail += validateAdjective(form.adjective3.value)
-			fail += validateAdverb(form.adverb.value)
-			fail += validateName(form.writer.value)
 
 			if (fail == "") return true
 			else { alert(fail); return false }
@@ -182,7 +159,7 @@ echo <<<_BODY
 <form style="display:$formHide;" method="post" action="lotr.php" onSubmit="return validate(this)">
 	<label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun1</p>
 	<input type="text" name="noun1" value="$noun1">
-	<label class="tooltip">Type a Verb:<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb1</p>
+	<label class="tooltip">Type a Verb (past tense):<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb1</p>
 	<input type="text" name="verb1" value="$verb1">
 	<label class="tooltip">Type an Adjective:<span class="tooltiptext">Used to modify a noun. ('hot' potato, 'cold' ice, 'green' eggs) <a class="tipRef" style="color: lightblue;" href="https://coolestwords.com/cool-adjectives/" target="blank">Cool Adjectives</a></span></label><p class="err">$fail_adj1</p>
 	<input type="text" name="adjective1" value="$adjective1">
@@ -190,18 +167,11 @@ echo <<<_BODY
     <input type="text" name="noun2" value="$noun2">
     <label class="tooltip">Type a Verb:<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb2</p>
 	<input type="text" name="verb2" value="$verb2">
-	<label class="tooltip">Type an Adverb:<span class="tooltiptext">Describes, modifies, or provides more information about a verb. ('quickly' run, 'safely' jump) <a class="tipRef" style="color: lightblue;" href="https://grammar.yourdictionary.com/parts-of-speech/adverbs/list-of-100-adverbs.html" target="blank">Adverbs</a></span></label><p class="err">$fail_adv</p>
-    <input type="text" name="adverb" value="$adverb">
     <label class="tooltip">Type an Adjective:<span class="tooltiptext">Used to modify a noun. ('hot' potato, 'cold' ice, 'green' eggs) <a class="tipRef" style="color: lightblue;" href="https://coolestwords.com/cool-adjectives/" target="blank">Cool Adjectives</a></span></label><p class="err">$fail_adj2</p>
-        <input type="text" name="adjective2" value="$adjective2">
+    <input type="text" name="adjective2" value="$adjective2">
     <label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun3</p>
     <input type="text" name="noun3" value="$noun3">
-    <label class="tooltip">Type a Verb:<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb3</p>
-    <input type="text" name="verb3" value="$verb3">
-    <label class="tooltip">Type an Adjective:<span class="tooltiptext">Used to modify a noun. ('hot' potato, 'cold' ice, 'green' eggs) <a class="tipRef" style="color: lightblue;" href="https://coolestwords.com/cool-adjectives/" target="blank">Cool Adjectives</a></span></label><p class="err">$fail_adj3</p>
-        <input type="text" name="adjective3" value="$adjective3">
-	<label class="tooltip">Type your Name:<span class="tooltiptext">Or the name of someone you know.</span></label><p class="err">$fail_writer</p>
-	<input type="text" name="writer" value="$writer">
+    
 	<br>
 
 	<div id="error" style="display:$errorHide;">Sorry, the following errors were found!<br>

@@ -42,7 +42,7 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
     $fail .= validate_word($verb3);
     $fail .= validate_adjective($adjective1);
     $fail .= validate_adjective($adjective2);
-    $fail .= validate_adjective($adjective2);
+    $fail .= validate_adjective($adjective3);
 	$fail .= validate_adverb($adverb);
 	$fail .= validate_name($writer);
 
@@ -56,9 +56,9 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
 	if ($fail == "")
 	{
         $output = "<h2>Aerosmith - I Don't Want to Miss a Thing</h2><br><h3>Lyrics edited by $writer</h3><br>
-        I could $verb3 awake just to $adjective1 you $verb1-ing<br>
-        Watch you $noun3 while you are $verb3-ing<br>
-        While you're $adverb away and dreaming<br>
+        I could $verb3 awake just to $verb2 you $verb1-ing<br>
+        Watch you $noun3 while you are " . $verb3 ."ing<br>
+        While you're $adverb away and $adjective1<br>
         I could spend my life in this $adjective2 surrender<br>
         I could stay lost in this $noun1 forever
         Ooh, every moment spent with you is a moment I treasure<br>
@@ -69,52 +69,7 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
         'Cause even when I dream of you<br>
         The $adjective3 dream will never do<br>
         I'd still miss you, babe<br>
-        And I don't want to $verb2 a $noun2<br>
-        Lying close to you feeling your $noun3 beating<br>
-        And I'm wondering what you're dreaming<br>
-        Wondering if it's me you're seeing<br>
-        Then I kiss your eyes<br>
-        And thank God we're together<br>
-        And I just want to stay with you in this moment forever<br>
-        Forever and ever<br>
-        I don't want to close my eyes<br>
-        I don't want to fall asleep<br>
-        'Cause I'd miss you, babe<br>
-        And I don't want to $verb2 a $noun2<br>
-
-
-        'Cause even when I dream of you<br>
-        The sweetest dream will never do<br>
-        I'd still $verb3 you, babe<br>
-        And I don't want to $verb2 a $noun2<br>
-        And I don't want to $verb1 one smile<br>
-        I don't want to miss one kiss<br>
-        Well, I just want to be with you, right here with you<br>
-        Just like this<br>
-        I just want to hold you close<br>
-        I feel your heart so close to mine<br>
-        And just stay here in this moment<br>
-        For all of the rest of time<br>
-        Yeah-yeah-yeah-yeah-yeah!<br>
-        Don't want to close my eyes<br>
-        Don't want to fall asleep<br>
-        'Cause I'd miss you, babe<br>
-        And I don't want to $verb2 a $noun2<br>
-        'Cause even when I dream of you<br>
-        The sweetest dream will never do<br>
-        I'd still miss you, babe<br>
-        And I don't want to miss a thing<br>
-        I don't want to close my eyes<br>
-        I don't want to fall asleep<br>
-        'Cause I'd miss you, babe<br>
-        And I don't want to $verb2 a $noun2<br>
-        'Cause even when I dream of you<br>
-        The sweetest dream will never do<br>
-        I'd still miss you, babe<br>
-        And I don't want to miss a thing<br>
-        Don't want to close my eyes<br>
-        I don't want to fall asleep, yeah<br>
-        I don't want to $verb2 a $noun2<br>";
+        And I don't want to $verb2 a $noun2<br>";
 
 		$formHide = "none";
 		$outputHide = "inline-block";

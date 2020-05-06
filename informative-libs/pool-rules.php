@@ -52,17 +52,17 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
 	if ($fail == "")
 	{
 		$output = "<h2>Pool Rules</h2>
-		<ul>
-			<li>Food or drink is $adjective1 in the pool area.</li>
-			<li>No $noun1 allowed in the pool areal</li>
+		<ul id='poolRules'>
+			<li>Food or drink is $noun1 in the pool area.</li>
+			<li>No $verb2 allowed in the pool areal</li>
 			<li>Alcoholic $noun3's are prohibited.</li>
 			<li>Any person suspected of being under the influence of $noun2 shall be prohibited from entering the pool.</li>
-			<li>Pets or any animals are not allowed in the $noun3 except for service animals</li>
+			<li>Pets or any animals are not allowed in the $noun1 except for service animals</li>
 			<li>No $adjective2 on the pool deck</li>
-			<li>Children shall not use pool without $noun1 in attendance.</li>
+			<li>Children shall not use pool without $noun3 in attendance.</li>
 			<li>Bathers must wear $adjective3 swim attire. </li>
 			<li>No $verb1 except in designated " . $verb1 . "ing areas.</li>
-			<li>Management has the right to $verb2 any patron to $verb3 for non-compliance with the above rules.</li>
+			<li>Management has the right to $verb3 any patron for non-compliance with the above rules.</li>
 		</ul>
 		
         ";
@@ -190,7 +190,7 @@ echo <<<_BODY
 	<input type="text" name="adjective1" value="$adjective1">
 	<label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun2</p>
     <input type="text" name="noun2" value="$noun2">
-    <label class="tooltip">Type a Verb:<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb2</p>
+    <label class="tooltip">Type a Verb (present tense):<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb2</p>
 	<input type="text" name="verb2" value="$verb2">
     <label class="tooltip">Type an Adjective:<span class="tooltiptext">Used to modify a noun. ('hot' potato, 'cold' ice, 'green' eggs) <a class="tipRef" style="color: lightblue;" href="https://coolestwords.com/cool-adjectives/" target="blank">Cool Adjectives</a></span></label><p class="err">$fail_adj2</p>
     <input type="text" name="adjective2" value="$adjective2">

@@ -89,7 +89,7 @@ echo <<<_END
         $(document).ready(function(){
             $(document.body).ready(function() {
                 
-                $(".main").delay(100).fadeIn(800);
+                $(".main").fadeIn(800);
             });
 
             $(".link").click(function() {

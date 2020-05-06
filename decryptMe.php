@@ -18,13 +18,12 @@ if (isset($_POST['encryptMessage'])) {
     
     for($i = 0; $i <= $encryptLength - 1; ++$i){
         $thisDecimal = ord($encrypted[$i]);
-       
+
         
 
         if($thisDecimal >= 33 && $thisDecimal <= 122){
 
             
-
             $thisNum = $thisDecimal + $shiftVal;
 
             if($thisNum > 122){
@@ -40,31 +39,6 @@ if (isset($_POST['encryptMessage'])) {
         else{
             $tempFill .= chr($thisDecimal);
         }
-    //     if($thisDecimal >= 32 && $thisDecimal <= 63){
-           
-            
-    //         if($thisNum > 63){
-    //             $tempFill .= chr($thisDecimal - 31 + $shiftVal);
-    //         }
-    //         elseif($thisNum < 32){
-    //             $tempFill .= chr($thisDecimal + 31 + $shiftVal);
-    //         }
-    //         else{
-    //             $tempFill .= chr($thisDecimal += $shiftVal);
-    //         }
-    //     }
-
-    //     if($thisDecimal >= 65 && $thisDecimal <= 122){
-    //         if($thisNum > 122){
-    //             $tempFill .= chr($thisDecimal - 57 + $shiftVal);
-    //         }
-    //         elseif($thisNum < 64){
-    //             $tempFill .= chr($thisDecimal + 57 + $shiftVal);
-    //         }
-    //         else{
-    //             $tempFill .= chr($thisDecimal += $shiftVal);
-    //         }
-    //     }
         
     }
     $output = $tempFill;
@@ -118,21 +92,21 @@ echo <<<_END
 _END;
 
 echo <<<_END
-    <form id="encrpt" method="post" action="encryptMe.php">
+    <form id="encrpt" method="post" action="decryptMe.php">
     <div id="switchCrypt">
-        <a href="encryptMe.php" id="encrypt">Encrypt</a>|
-        <a href="decryptMe.php" id="decrypt">Decrypt</a>
-        <br>
-        <br>
-        <h3>Encrypt a secret message.</h3>
+    <a href="encryptMe.php" id="encrypt">Encrypt</a>|
+    <a href="decryptMe.php" id="decrypt">Decrypt</a>
+    <br>
+    <br>
+    <h3>Decrypt an encrypted message.</h3>
     </div>
-    <input type="textarea" cols="200" rows="550" wrap="soft" name="encryptMessage">
+    <input type="textarea" cols="70" rows="150" wrap="soft" name="encryptMessage">
     <p>Enter an encryption value</p>
     <p class="enterNum">(between -20 and +20)</p>
     <input type="number" name="shiftVal" min="-20" max="20">
     <br>
     <br>
-    <input type="submit" value="Encrypt" >
+    <input type="submit" value="Decrypt" >
 
     <div class="outputArea">
             $output

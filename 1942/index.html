@@ -9,10 +9,13 @@
 	}
 	#container{
 		background: url('background.jpg');
-		width:1000px;
-		height:550px;
+		background-size: cover;
+		width:800px;
+		height:650px;
 		background-blend-mode: darken;
 		background-color: rgba(32, 48, 90, 0.63);
+		border: 4px solid silver;
+		margin-left: 160px;
 	}
 	#hero{
 		background: url('1942.gif');
@@ -47,13 +50,48 @@
 	}
 	#score{
 		position:absolute;
-		border:10px solid red;
-		top:20px;
+		border:5px solid silver;
+		width: 255px;
+		top:320px;
 		left:1030px;
-		background-color:white;
+		background-color:sandybrown;
 		padding:10px;
 		font-size:30px;
 		font-family: Arial;	
+	}
+	#score_info{
+		color: white;
+		position: absolute;
+		top: 70px;
+		left: 1030px;
+	}
+	#stopkeyOutput{
+		background-color: yellow;
+	}
+	#gameplay{
+		margin-left: 160px;
+	}
+	table, th, td {
+	border: 1px solid black;
+	/* background-color: #f1f1c1; */
+	background-color: silver;
+	border-collapse: collapse;
+	}
+	th, td {
+	padding: 15px;
+	text-align: left;
+	}
+	table#t01 {
+	width: 100%;    
+	background-color: #f1f1c1;
+	}
+	#paused{
+		color: white;
+		font-size: 3em;
+		position:absolute;
+		top: 230px;
+		left: 480px;
+		opacity: 0.0;
 	}
 </style>
 </head>
@@ -64,21 +102,41 @@
 		<div id='bullets'></div>
 		<div id="explode"></div></div>	
 	</div>
-
+	<div id="paused"><p>PAUSED</p></div>
+	<div id="gameplay" style="color: white;"><p>Use arrow keys to move, and spacebar to shoot.</p><p> Backspace to pause.</p><p> Enter to continue.</p></div>
+	<div id="stopkeyOutput"></div>
 	<div id='score'></div>
+	<!-- <pre id="score_info">
+		<p>Hit Enemy:       + 10pts</p>
+		<p>Bullets:         - 2pt</p>
+		<p>Get hit:         - 50pts</p>
+		<p>Enemy gets away: - 10pts</p>
+	</pre> -->
+	<div id="score_info">
+		<table>
+			<tr>
+				<th>action</th><th>cost</th><th>totals</th>
+			</tr>
+			<tr><td>Hit Enemy</td><td>10 pts</td><td id="hitEnemy"></td></tr>
+			<tr><td>Bullets</td><td>-2 pts</td><td id="bulletUse"></td></tr>
+			<tr><td>Get hit</td><td>-50pts</td><td id="gotHit"></td></tr>
+			<tr><td>Enemy gets away</td><td>-10pts</td><td id="gotAway"></td></tr>
+		</table>
+	</div>
 	<audio id="myAudio">
 	  <source src="horse.ogg" type="audio/ogg">
 	  <source src="horse.mp3" type="audio/mpeg">
 	</audio>
 
 <script>
-	var score = 0;
+	var score = hitEnemy = bulletUse = gotAway = gotHit = 0;
+
 	var hero = {
 		x:300,
 		y:500
 	}
 
-	var enemies = [{x: 200, y: 600}, {x: 300, y: 200}, {x: 400, y: 0}, {x: 500, y: 300}, {X: 600, y: 500}, {X: 700, y: 110}, {X: 800, y: 0}];
+	var enemies = [{x: 200+160, y: -900}, {x: 300+160, y: -500}, {x: 400+160, y: -350}, {x: 500+160, y: -710}, ];
 
 	var bullets = [];
 	var explode = [];
@@ -86,18 +144,18 @@
 	function displayHero(){
 		document.getElementById('hero').style['top'] = hero.y + 'px';
 		document.getElementById('hero').style['left'] = hero.x + 'px';
-		if(hero.y < 5){
-			hero.y = 10
-		}
-		if(hero.y > 520){
-			hero.y = 540
-		}
-		if(hero.x < 5){
-			hero.x = 0
-		}
-		if(hero.x > 970){
-			hero.x = 980
-		}
+		// if(hero.y < 200){
+		// 	hero.y = 200
+		// }
+		// if(hero.y > 620){
+		// 	hero.y = 620
+		// }
+		// if(hero.x < 5){
+		// 	hero.x = 0
+		// }
+		// if(hero.x > 785){
+		// 	hero.x = 785
+		// }
 		
 	}
 
@@ -114,14 +172,22 @@
 		for(var i = 0; i < enemies.length; i++){
 			enemies[i].y += 5;
 			// here is a cool algorithm for disapearing and reapearing enemies as they leave the screen
-			if(enemies[i].y > 550){
-				enemies[i].y = 0;
-				enemies[i].x = Math.random()*900;
+			if(enemies[i].y > 645){
+				enemies[i].y = -200;
+				enemies[i].x = (Math.random()*780)+160;
+				score -= 10;
+				gotAway += 1;
 			}
 			if(enemies[i].x >= hero.x-10 && enemies[i].x <= hero.x+4 && enemies[i].y >= hero.y-10 && enemies[i].y <= hero.y+10){
-				score -= 100
-				enemies[i].y = 0
-				hero.x = 300
+
+				document.getElementById('explode').style['top'] = enemies[i].y
+				document.getElementById('explode').style['left'] = enemies[i].x
+				document.getElementById('explode').style.display = 'block';
+				$("#explode").fadeOut(290);
+				score -= 50
+				gotHit += 1
+				enemies[i].y = -50
+				hero.x = (Math.random()*500+160);
 				hero.y = 500
 			}
 			
@@ -134,6 +200,7 @@
 			output += "<div class='bullet' style='top:" + bullets[i].y + "px; left:" + bullets[i].x + "px;'></div>";
 		}
 		document.getElementById('bullets').innerHTML = output;
+		
 	}
 	function moveBullets(){
 		for(var i = 0; i < bullets.length; i++){
@@ -190,6 +257,13 @@
 		diplayExplode();
 		displayScore();
 	}
+	
+	function myStopFunction() {
+		clearInterval(myVar);
+	}
+	function myStartFunction() {
+		set(myVar);
+	}
 	var x = document.getElementById("myAudio"); 
 
 	function playAudio() { 
@@ -200,19 +274,18 @@
 		for(var i=0; i<bullets.length; i++){
 			for(var j=0; j<enemies.length; j++){
 				if( Math.abs(bullets[i].x - enemies[j].x) < 20 && Math.abs(bullets[i].y - enemies[j].y) < 5){
+
 					document.getElementById('explode').style['top'] = enemies[j].y
 					document.getElementById('explode').style['left'] = enemies[j].x
-					
-					
-					// displayExplode(x,y)
-					// playAudio()
-					score += 10;
-					enemies[j].y = 0;
-					enemies[j].x = Math.random()*500;
-					bullets[i].y = 0;
-					// explode.fadeOut(explode);
+
 					document.getElementById('explode').style.display = 'block';
-					$("#explode").fadeOut(200);
+					$("#explode").fadeOut(250);
+					score += 10;
+					hitEnemy += 1;
+					enemies[j].y = -400;
+					enemies[j].x = (Math.random()*500)+160;
+					bullets[i].y = -15;
+					
 				}
 				
 		
@@ -222,22 +295,79 @@
 
 	function displayScore(){
 		document.getElementById('score').innerHTML = score; 
+		document.getElementById('hitEnemy').innerHTML = hitEnemy; 
+		document.getElementById('bulletUse').innerHTML = bulletUse; 
+		document.getElementById('gotAway').innerHTML = gotAway; 
+		document.getElementById('gotHit').innerHTML = gotHit; 
 	}
+	// function displayScore(){
+	// 	document.getElementById('stopkeyOutput').innerHTML = stopkeyOutput;
+	// }
 
-	setInterval(gameLoop, 50);
+	// setInterval(gameLoop, 50);
+	myVar = setInterval(gameLoop, 50);
+
+	
+	
 
 	document.onkeydown = function(a) {
+		var stopKey = "go";
+		
 		if(a.keyCode == 37){
-			hero.x -= 10; 
+			if(hero.x < 10+160)
+				hero.x += 0
+			else if(hero.x > 10+160)
+				hero.x -= 10; 
 		} else if(a.keyCode == 39){
-			hero.x += 10;
+			if(hero.x > 785+160)
+				hero.x += 0
+			else if(hero.x < 785+160)
+				hero.x += 10;
 		} else if(a.keyCode == 38){
-			hero.y -= 10;
+			if(hero.y < 200)
+				hero.y += 0
+			else if(hero.y > 200)
+				hero.y -= 10;
 		} else if(a.keyCode == 40){
-			hero.y += 10;
+			if(hero.y > 625)
+				hero.y += 0;
+			else if( hero.y < 625)
+				hero.y += 10;
 		}else if(a.keyCode == 32){
 			bullets.push({x: hero.x+6, y: hero.y-12});
 			displayBullets();
+			score -= 2;
+			bulletUse += 1;
+		}else if(a.keyCode == 13){
+			if(stopKey == 'go'){
+				myStopFunction(myVar);
+				stopKey = 'stop';
+				// getElementById('paused').style.opacity = '0.5';
+			}
+			if(stopKey == 'stop'){
+				myVar = setInterval(gameLoop, 50);
+				stopKey = 'go';
+				
+			}
+			document.getElementById('paused').style.opacity = '0.0';
+		}else if(a.keyCode == 8){
+			if(stopKey == 'stop'){
+				myVar = setInterval(gameLoop, 50);
+				stopKey = 'go';
+				// getElementById('paused').style.opacity = '0.0';
+			}
+			if(stopKey == 'go'){
+				stopKey = "stop";
+				myStopFunction(myVar);
+				
+			}
+			document.getElementById('paused').style.opacity = '0.5';
+			// var stopkeyOutput = "";
+
+			// stopkeyOutput = "<p>(stop Key = " + stopKey +")</p>"
+			// document.getElementById('stopkeyOutput').innerHTML = stopkeyOutput;
+				
+
 		}
 		//console.log(a);
 	}

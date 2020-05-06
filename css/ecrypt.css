@@ -3,13 +3,11 @@
     padding: 0;
 }
 body{
-    background-color: rgb(41, 68, 68);
+    /* background-color: rgb(41, 68, 68); */
+    background-color: rgb(52, 58, 65);
     /* width: 100%; */
 }
-#gameArea{
-    /* background-color: rgb(238, 238, 170); */
-    /* padding: 20px; */
-}
+
 #title{
     width: 100%;
     text-align: center;
@@ -22,11 +20,14 @@ form{
     text-align: center;
 }
     form input[type="textarea"]{
-        width: 100%;
+        width: 595px;
         height: 100px;
         margin: auto;
         margin-bottom: 40px;
         text-align: center;
+        word-wrap: break-word;
+        
+        overflow: auto
         
     }
     form input[type="submit"]{
@@ -44,26 +45,46 @@ form{
         margin-bottom: 10px;
     }
     .outputArea{
-        /* background-color: rgb(197, 213, 235); */
+        background-color: rgba(245, 222, 179, 0.219);
         height: 80px;
         /* width: 100%; */
         padding: 8px;
         text-align: center;
         margin: auto;
-        margin-top: 50px;
+        margin-top: 30px;
         /* border: 2px solid gray; */
         border: 2px solid gray;
+        word-wrap: break-word;
+        overflow: auto
     }
 input{
     display: inline-block;
     margin: auto;
 }
-
+#switchCrypt{
+    background-color: rgb(211, 211, 211);
+    width: 100%;
+}
+#switchCrypt a{
+    /* background-color: orange; */
+    width: 150px;
+    height: 40px;
+    margin: 5px 15px 5px 15px;
+    padding: 8px;
+    text-decoration: none;
+}
 @media only screen and (max-width: 500px) {
+
     form{
         width: 100%;
-        padding: 10px;
-        color: white;
+        padding: 0px;
+        /* color: white; */
+    }
+    form input[type="textarea"]{
+        width: 99%;
+    }
+    .outputArea{
+        background-color: rgba(245, 222, 179, 0.219);
     }
 }
 @media only screen and (min-width: 501px) {
@@ -73,6 +94,5 @@ input{
         padding: 20px;
         margin: auto;
         border-radius: 10px;
-        background-color: rgba(255, 255, 255, 0.452);
     }
 }
