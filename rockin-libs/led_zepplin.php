@@ -33,8 +33,8 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective']
 	// 	$friend = fix_string($_POST['friend']);
 
     $fail = validate_noun($noun1);
-    $fail = validate_noun($noun2);
-    $fail = validate_noun($noun3);
+    $fail .= validate_noun($noun2);
+    $fail .= validate_noun($noun3);
     $fail .= validate_word($verb1);
     $fail .= validate_word($verb2);
     $fail .= validate_word($verb3);
@@ -64,7 +64,7 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective']
         Want a whole lotta $noun1<br>
         Want a whole lotta $noun1<br>
         Want a whole lotta $noun1<br>
-        <br>";
+        <br><br><br>";
 
 		$formHide = "none";
 		$outputHide = "inline-block";
@@ -211,7 +211,7 @@ echo <<<_BODY
 
 <div id="output" style="display:$outputHide;">
     $output
-    <a href="led_zepplin.php"><button id="newGame">Play Again</button></a>
+    <a href="../radlibs.php"><button id="newGame">Another Lib</button></a>
     <a href="../index.php"><button id="goBack">More Games</button></a>
 </div>
 

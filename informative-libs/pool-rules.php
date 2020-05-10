@@ -33,8 +33,8 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
 	// 	$friend = fix_string($_POST['friend']);
 
     $fail = validate_noun($noun1);
-    $fail = validate_noun($noun2);
-	$fail = validate_noun($noun3);
+    $fail .= validate_noun($noun2);
+	$fail .= validate_noun($noun3);
     $fail .= validate_word($verb1);
     $fail .= validate_word($verb2);
     $fail .= validate_word($verb3);
@@ -211,15 +211,16 @@ echo <<<_BODY
 	<input type="submit" value="Lets do this!">
 </form>
 
-<div id="output" style="display:$outputHide;">
+<div id="output" class="poolRules" style="display:$outputHide;">
     $output
-    <a href="../radlibs.php"><button id="newGame">Another Lib</button></a>
-    <a href="../index.php"><button id="goBack">More Games</button></a>
+    
 </div>
 
 </div>
 
 </div>
+<a href="../radlibs.php"><button id="newGame">Another Lib</button></a>
+<a href="../index.php"><button id="goBack">More Games</button></a>
 </body>
 </html>
 

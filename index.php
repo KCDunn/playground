@@ -52,6 +52,17 @@ echo <<<_END
 
     <div class="main">
         
+        
+        <div class="game_item">
+            <h2>Rad Libs</h2>
+            <p>Like Mad Libs, but radder! Ok well, its Mad Libs.</p>
+            <a class="go_to link" href="radlibs.php">Rad Libs</a>
+        </div>
+        <div class="game_item">
+            <h2>Tru Story</h2>
+            <p>Read and write true stories based on selected topics</p>
+            <a class="go_to link" href="guessingGame.php">Tru Story</a>
+        </div>
         <div class="game_item">
             <h2>Guessing Game</h2>
             <p>Guess a number between 1 and 100. How many guesses does it take you?</p>
@@ -62,16 +73,6 @@ echo <<<_END
             <p>Encrypt or Decrypt messages sent between you and your conspiracy friends!</p>
             <a class="go_to link" href="encryptMe.php">Encrypt Me</a>
             
-        </div>
-        <div class="game_item">
-            <h2>Rad Libs</h2>
-            <p>Like Mad Libs, but radder! Ok well, its Mad Libs.</p>
-            <a class="go_to link" href="radlibs.php">Rad Libs</a>
-        </div>
-        <div class="game_item">
-            <h2>Tru Story</h2>
-            <p>Read and write true stories based on selected topics</p>
-            <a class="go_to link" href="guessingGame.php">Tru Story</a>
         </div>
         <div class="game_item desktop">
             <h2>Pacman</h2>

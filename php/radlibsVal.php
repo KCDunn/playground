@@ -78,6 +78,18 @@ function validate_word($field) // may just use this for all other words except f
 		return "Names length is set to 55 characters max.<br>";
 }
 
+function validate_number($field) // may just use this for all other words except for nouns(which may have num or dash), and Names(which may have spaces).
+{
+	if($field == "") return "Number not entered.<br>";
+	else if (preg_match("/[^0-9]/", $field))
+		return "Only numbers used in Number field.<br>";
+	
+	else if (!($field >= 1 && $field <= 99))
+		return "Number must be between 1 and 99.<br>";
+}
+
+
+
 // fix strings on input
 
 function fix_string($string)

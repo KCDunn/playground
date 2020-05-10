@@ -4,12 +4,9 @@
 }
 
 body{
-    /* width: 100%; */
     background-color: rgb(52, 58, 65);
     color: white;
-    /* padding: 10px; */
-    /* display: flex; */
-    
+    text-align: center;
 }
 #main{
     /* display: flex;
@@ -24,15 +21,11 @@ h1{
 .game_theme{
     display: inline-block;
     vertical-align: middle;
-    width: 300px;
+    /* width: 300px;
     height: 400px;
-    margin: 20px;
+    margin: 20px; */
     background-color: rgb(98, 221, 230);
     background-blend-mode: color-dodge;
-    /* background-blend-mode: color-burn; */
-    /* background-blend-mode: luminosity; */
-    /* background-blend-mode: difference; */
-    /* background-blend-mode: lighten; */
     color: black;
     text-align: center;
     border-radius: 8px;
@@ -58,7 +51,7 @@ h1{
 ul{
     list-style-type: none;
     list-style-position: inside;
-    width: 100%;
+    /* width: 100%; */
     padding-top: 20px;
     text-align: left;
 }
@@ -81,11 +74,51 @@ a{
     text-decoration: none;
     color: white;
 }
+#goback{
+    /* width: 100px; */
+    text-decoration: none;
+    color: black;
+    background-color: rgb(139, 174, 185);
+    padding: 8px;
+    /* margin-top: 80px; */
+    display: inline-block;
+    border: 2px solid grey;
+    margin: auto;
+    margin-top: 15px;
+
+}
+#goback:hover{
+    
+    background-color: lightblue;
+}
 
 @media only screen and (max-width: 500px) {
+    body{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    h1{
+        margin-bottom: 15px;
+    }
+    #wrapper{
+        width: 98%;
+        padding: 0px;
+        margin: 0px;
+        /* display: flex; */
+    }
     #main{
-        width: 350px;
+        /* width: 350px; */
+        width: 90%;
+        
+        padding: 0px;
+        margin: 0px;
         margin: auto;
+        display: block;
+    }
+    .game_theme{
+        width: 90%;
+        margin-bottom: 15px;
     }
 }
 
@@ -95,11 +128,27 @@ a{
         margin: auto;
         
     }
+    .game_theme{
+        display: inline-block;
+        vertical-align: middle;
+        width: 300px;
+        /* height: 400px; */
+        margin: 20px;
+
+    }
 }
 
 @media only screen and (min-width: 715px) {
     #main{
         width: 710px;
+    }
+    .game_theme{
+        display: inline-block;
+        vertical-align: middle;
+        width: 300px;
+        height: 400px;
+        margin: 20px;
+
     }
 }
 

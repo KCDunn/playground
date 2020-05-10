@@ -46,9 +46,12 @@ input[type=submit]:hover, #goback:hover{
     /* height: 35px;; */
     border-color: rgba(0, 0, 0, 0);
 }
-#goback{
+a #goback{
+    text-decoration: none;
+    color: black;
     width: 120px;
-    background-color: rgba(255, 255, 255, 0.363);
+    height: 50px;
+    background-color: lightblue;
     transition: 0.2s;
 }
 #goback:hover{

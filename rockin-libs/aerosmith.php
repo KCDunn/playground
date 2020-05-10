@@ -35,8 +35,8 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
 	// 	$friend = fix_string($_POST['friend']);
 
     $fail = validate_noun($noun1);
-    $fail = validate_noun($noun2);
-    $fail = validate_noun($noun3);
+    $fail .= validate_noun($noun2);
+    $fail .= validate_noun($noun3);
     $fail .= validate_word($verb1);
     $fail .= validate_word($verb2);
     $fail .= validate_word($verb3);
@@ -69,7 +69,7 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
         'Cause even when I dream of you<br>
         The $adjective3 dream will never do<br>
         I'd still miss you, babe<br>
-        And I don't want to $verb2 a $noun2<br>";
+        And I don't want to $verb2 a $noun2<br><br><br>";
 
 		$formHide = "none";
 		$outputHide = "inline-block";

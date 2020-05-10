@@ -68,3 +68,11 @@ function validateName(field)
     else if (/[^a-z A-Z]/.test(field)) return "Only letters can be used in Name.\n"
     return ""
 }
+
+function validateNumber(field)
+{
+    if (field == "") return "Name was not entered.\n"
+    else if (/[^0-9]/.test(field)) return "Only numbers in numbers field.\n"
+    return ""
+}
+

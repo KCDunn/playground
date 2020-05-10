@@ -54,8 +54,8 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
 	if ($fail != "")
 	{
         $fail_noun1 = validate_noun($noun1);
-        $fail_noun2 = validate_noun($noun2);
-        $fail_noun3 = validate_noun($noun3);
+        $fail_noun2 .= validate_noun($noun2);
+        $fail_noun3 .= validate_noun($noun3);
         $fail_verb1 .= validate_word($verb1);
         $fail_verb2 .= validate_word($verb2);
         $fail_adj1 .= validate_adjective($adjective1);

@@ -64,12 +64,13 @@ _HEAD;
 
 echo <<<_BODY
 <body>
-<div id="wrapper">
 <h1>Rad Libs</h1>
-<div id="main">
+<div id="wrapper">
+    
+    <div id="main">
 
 
-<div class="game_theme lit">
+        <div class="game_theme lit">
             <h2>Literary Libs</h2>
             <p>These Rad Libs are based on excerpts from popular literature.</p>
             <ul>
@@ -86,8 +87,7 @@ echo <<<_BODY
                 <a href="rockin-libs/led_zepplin.php"><li>Led Zepplin</li></a>
                 <a href="rockin-libs/aerosmith.php"><li>Aerosmith</li></a>
                 <a href="rockin-libs/commodores.php"><li>Commodores</li></a>
-                <a href="#"><li>Rock Lib</li></a>
-                <a href="#"><li>Rock Lib</li></a>
+                
             </ul>
             
         </div>
@@ -97,28 +97,22 @@ echo <<<_BODY
             <ul>
                 <a href="informative-libs/weather-alert.php"><li>Severe Weather Alert</li></a>
                 <a href="informative-libs/pool-rules.php"><li>Pool Rules</li></a>
-                <a href="#"><li>Informative Lib</li></a>
-                <a href="#"><li>Informative Lib</li></a>
+                
             </ul>
         </div>
         <div class="game_theme other">
-            <h2>Other Libs</h2>
-            <p>Random stuff like jokes, and what not.</p>
+            <h2>Pirate Libs</h2>
+            <p>All things pirates like!</p>
             <ul>
-                <a href="#"><li>Random Lib</li></a>
-                <a href="#"><li>Random Lib</li></a>
-                <a href="#"><li>Random Lib</li></a>
-                <a href="#"><li>Random Lib</li></a>
+                <a href="pirate-libs/pirates_life.php"><li>Pirates Life</li></a>
+                <a href="pirate-libs/bottles.php"><li>Bottles</li></a>
+                <a href="pirate-libs/around_the_world.php"><li>Around the World</li></a>
             </ul>
         </div>
 
-
-
+    </div>
 </div>
-
-
-
-</div>
+<a id="goback" href="index.php">Back to Games</a>
 </body>
 </html>
 

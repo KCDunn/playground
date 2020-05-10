@@ -44,9 +44,9 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
 	if ($fail != "")
 	{
         $fail_noun1 = validate_noun($noun1);
-        $fail_noun2 = validate_noun($noun2);
-		$fail_noun3 = validate_noun($noun3);
-		$fail_city = validate_noun($city);
+        $fail_noun2 .= validate_noun($noun2);
+		$fail_noun3 .= validate_noun($noun3);
+		$fail_city .= validate_noun($city);
         $fail_verb1 .= validate_word($verb1);
         $fail_verb2 .= validate_word($verb2);
         $fail_verb3 .= validate_word($verb3);
@@ -132,7 +132,7 @@ echo <<<_BODY
 <form style="display:$formHide;" method="post" action="dracula.php" onSubmit="return validate(this)">
 	<label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun1</p>
 	<input type="text" name="noun1" value="$noun1">
-	<label class="tooltip">Type a Verb:<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb1</p>
+	<label class="tooltip">Type a Verb (passed tense):<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb1</p>
 	<input type="text" name="verb1" value="$verb1">
 	<label class="tooltip">Type an Adjective:<span class="tooltiptext">Used to modify a noun. ('hot' potato, 'cold' ice, 'green' eggs) <a class="tipRef" style="color: lightblue;" href="https://coolestwords.com/cool-adjectives/" target="blank">Cool Adjectives</a></span></label><p class="err">$fail_adj1</p>
 	<input type="text" name="adjective1" value="$adjective1">

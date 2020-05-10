@@ -31,8 +31,8 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
 	// 	$friend = fix_string($_POST['friend']);
 
     $fail = validate_noun($noun1);
-    $fail = validate_noun($noun2);
-    $fail = validate_noun($noun3);
+    $fail .= validate_noun($noun2);
+    $fail .= validate_noun($noun3);
     $fail .= validate_word($verb1);
     $fail .= validate_adjective($adjective1);
     $fail .= validate_adjective($adjective2);

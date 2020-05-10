@@ -7,15 +7,16 @@ body{
     /* width: 100%; */
     background-color: rgb(52, 58, 65);
     color: white;
-    padding: 10px;
+    /* padding: 10px; */
     /* display: flex; */
+    text-align: center;
     
 }
 #wrapper{
     display: none;
 }
 .main{
-    width: 100%;
+    /* width: 100%; */
 }
 h1{
     
@@ -24,9 +25,10 @@ h1{
 }
 form{
     /* display: inline-block; */
-    width: 600px;
+    /* width: 600px; */
     display: flex; 
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 input[type=text] {
     width: 100%;
@@ -75,8 +77,8 @@ input[type=text] {
   }
   hr{
       /* color: rgb(190, 116, 54); */
-      background-color: rgb(190, 116, 54);
-      height: 4px;
+      /* background-color: rgb(190, 116, 54);
+      height: 4px; */
   }
   button{
     background-color: rgb(190, 116, 54);
@@ -139,22 +141,69 @@ input[type=text] {
 .err{
     color: rgb(255, 91, 41);
 }
+/* css for 'Pool Rules' found in informative-libs */
+.poolRules{
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+    display: block;
+}
+.poolRules h2{
+    text-align: center;
+    background-color: rgb(13, 20, 114);
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.poolRules ul{
+    padding: 5px 40px 5px 40px;
+}
+.poolRules li{
+    color: rgb(13, 20, 114);
+    font-family: sans-serif;
+    padding: 6px;
+}
+#newGame, #goBack{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-top: 30px;
+}
 @media only screen and (max-width: 400) {
-    form, #output, hr{
-        width: 100%;
-    }
+    
 }
 @media only screen and (max-width: 500px) {
-    .main{
+   
+    body{
         /* width: 100%; */
+    }
+    #wrapper{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .main{
+        width: 99%;
+        padding: 0px;
+        margin: 0px;
+    }
+    form{
+        /* width: 90%; */
     }
     h1{
         margin: 0;
         padding: 0;
         text-align: center;
     }
-    form, #output, hr{
+    form, #output{
         width: 98%;
+        margin: 0px;
+    }
+    input{
+        width: 97%;
     }
     #output{
         padding-top: 10px;
@@ -170,6 +219,15 @@ input[type=text] {
     #output p{
         margin-bottom: 210px;
         font-size: 1.2em;
+    }
+    .tooltip .tooltiptext {
+        bottom: 100%;
+        left: 20%;
+    }
+    .tooltip .tooltiptext::after {
+        top: 49%;
+        right: 50%;
+        margin-top: -5px;
     }
 }
 @media only screen and (min-width: 501px) {

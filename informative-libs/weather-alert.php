@@ -17,8 +17,8 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
     $adjective2 = fix_string($_POST['adjective2']);
 
     $fail = validate_noun($noun1);
-	$fail = validate_noun($noun2);
-	$fail = validate_noun($noun3);
+	$fail .= validate_noun($noun2);
+	$fail .= validate_noun($noun3);
     $fail .= validate_word($verb1);
     $fail .= validate_word($verb2);
     $fail .= validate_adjective($adjective1);
@@ -27,6 +27,9 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
 
 	if ($fail == "")
 	{
+		$noun3_upper = strtoupper($noun3);
+		$noun3_fstUp = ucfirst(strtolower($noun3));
+		
         $output = "<h2>Hazardous Weather Outlook</h2>
 		<p>Hazardous Weather Outlook<br>
 		<br>
@@ -42,9 +45,9 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
 		<br>
 		No $adjective2 $noun1 is expected at this time.<br>
 		<br>
-		.$noun3 INFORMATION STATEMENT...<br>
+		.$noun3_upper INFORMATION STATEMENT...<br>
 		<br>
-		$noun3 activation may be needed. Please $verb2 any information about
+		$noun3_fstUp activation may be needed. Please $verb2 any information about
 		observed severe weather to the NWS while following all local, state,
 		and CDC guidelines.<br>
 		<br>
