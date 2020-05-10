@@ -125,7 +125,7 @@ echo <<<_BODY
 <div id="wrapper">
 
 <div class="main">
-<h1>Informative RadLibs</h1>
+<h1>Pirate Libs</h1>
 
 <form style="display:$formHide;" method="post" action="pirates_life.php" onSubmit="return validate(this)">
     <label class="tooltip">Type a Verb:<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb1</p>

@@ -129,7 +129,7 @@ echo <<<_BODY
 <div id="wrapper">
 
 <div class="main">
-<h1>Informative RadLibs</h1>
+<h1>Pirate Libs</h1>
 
 <form style="display:$formHide;" method="post" action="around_the_world.php" onSubmit="return validate(this)">
 	<label class="tooltip">Something Pirates Covet:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun1</p>
