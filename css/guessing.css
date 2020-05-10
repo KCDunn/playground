@@ -83,24 +83,28 @@ input[type="submit"]:hover{
     }
 }
 @media only screen and (min-width: 501px) {
+    body{
+        /* background-color: rgb(37, 58, 117); */
+    }
     .main{
         width: 500px;
         margin: auto;
         height: 80%;
         text-align: center;
         padding: 20px;
-        background-color: rgb(37, 58, 117)
+        
     }
     .gameArea{
-        width: 200px;
-        background-color: rgba(173, 216, 230, 0.829);
+        /* width: 200px; */
+        /* background-color: rgba(173, 216, 230, 0.829); */
         /* background-color: rgb(37, 58, 117); */
         margin: auto;
         margin-top: 20px;
         margin-bottom: 10px;
         padding: 10px;
-        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.404);
-        border-radius: 8px;
+        /* box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.404); */
+        /* border-radius: 8px; */
+        color: white;
     }
     #guess_count{
         color: white;
@@ -109,14 +113,14 @@ input[type="submit"]:hover{
 @media only screen and (min-width: 650px) {
     .main{
         /* background-image: radial-gradient(rgba(0, 0, 0, 0.295), rgba(173, 216, 230, 0.103), rgba(173, 216, 230, 0.877)); */
-        width: 650px;
+        /* width: 650px; */
         padding: 50px;
         height: 70%;;
     }
 }
 @media only screen and (min-width: 767px) {
     .main{
-        width: 90%;
+        /* width: 90%; */
         height: 50%;
         /* margin-top: 50px; */
     }
