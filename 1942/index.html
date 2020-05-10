@@ -93,6 +93,23 @@
 		left: 480px;
 		opacity: 0.0;
 	}
+	#goback{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(139, 174, 185);
+    padding: 8px;
+    /* margin-top: 80px; */
+    display: inline-block;
+    border: 2px solid grey;
+    margin: auto;
+	margin-top: 15px;
+	margin-left: 160px;
+    text-align: center;
+	}
+	#goback:hover{
+		
+		background-color: lightblue;
+	}
 </style>
 </head>
 <body>
@@ -123,6 +140,7 @@
 			<tr><td>Enemy gets away</td><td>-10pts</td><td id="gotAway"></td></tr>
 		</table>
 	</div>
+	<a id="goback" href="../index.php">Back to Games</a>
 	<audio id="myAudio">
 	  <source src="horse.ogg" type="audio/ogg">
 	  <source src="horse.mp3" type="audio/mpeg">

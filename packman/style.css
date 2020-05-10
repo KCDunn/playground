@@ -50,3 +50,20 @@ div#score{
   padding: 7px;
   text-align: center;
 }
+#goback{
+  width: 100px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(139, 174, 185);
+  padding: 8px;
+  /* margin-top: 80px; */
+  display: inline-block;
+  border: 2px solid grey;
+  margin: auto;
+  margin-top: 35px;
+
+}
+#goback:hover{
+  
+  background-color: lightblue;
+}
