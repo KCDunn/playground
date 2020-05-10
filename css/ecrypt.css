@@ -7,7 +7,10 @@ body{
     background-color: rgb(52, 58, 65);
     text-align: center;
 }
-
+.main{
+    /* background-color: rgb(139, 174, 185);  original light blue color */
+    background-color: rgb(115, 148, 158);
+}
 #title{
     width: 100%;
     text-align: center;
@@ -18,7 +21,11 @@ body{
 form{
     font-size: 1.2em;
     text-align: center;
-    background-color: rgb(139, 174, 185);
+    /* background-color: rgb(139, 174, 185); */
+    background-color: rgba(238, 237, 237, 0.336);
+    background-blend-mode: exclusion;
+    background-image: url(../../img/Steel1.jpeg);
+    background-size: cover;
 }
     form input[type="textarea"]{
         width: 595px;
@@ -55,7 +62,8 @@ form{
         margin: auto;
         margin-top: 30px;
         /* border: 2px solid gray; */
-        border: 2px solid gray;
+        border: 0px, 2px, 2px, 2px;
+        border-color: gray;
         word-wrap: break-word;
         overflow: auto;
     }
@@ -64,23 +72,51 @@ input{
     margin: auto;
 }
 #switchCrypt{
-    background-color: rgb(211, 211, 211);
-    padding-top: 5px;
+    /* background-color: rgba(211, 211, 211, 0.514); */
+    background-color: rgba(238, 237, 237, 0.336);
+    background-blend-mode: exclusion;
+    background-image: url(../../img/Steel1.jpeg);
+    background-size: cover;
+    padding-top: 8px;
     width: 100%;
+    border-radius: 10px 10px 0 0;
+    /* height: 100px; */
+    /* margin-top: 15px; */
     
 }
 #switchCrypt a{
-    /* background-color: orange; */
     width: 150px;
-    /* height: 40px; */
-    /* margin: 5px 15px 5px 15px; */
     padding: 5px;
     text-decoration: none;
     border: 1px solid gray;
+    margin: 1px 38px;
+    margin-top: 10%;
+    border-radius: 15%;
+    box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.678);
+    vertical-align: middle;
+    color: rgb(95, 95, 95);
+}
+#switchCrypt a:hover{
+    color: rgb(63, 63, 63);
+    border-color: rgb(100, 100, 100);
+}
+.off{
+    /* background-color: lightgray; */
+}
+#cryptBottom{
+    background-color: rgba(252, 250, 250, 0.336);
+    background-blend-mode: exclusion;
+    background-image: url(../../img/Steel1.jpeg);
+    background-size: cover;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    color: rgba(0, 0, 0, 0.822)
 }
 
 #thisPage{
-    background-color: rgb(238, 238, 170);
+    background-color: rgba(238, 238, 170, 0.726);
 }
 #goback{
     text-decoration: none;
@@ -99,7 +135,15 @@ input{
     background-color: lightblue;
 }
 @media only screen and (max-width: 500px) {
-
+    .main{
+        /* background-color: rgb(139, 174, 185); */
+        background-color: rgb(115, 148, 158);
+        padding: 5px;
+    }
+    #title{
+        font-size: 1em;
+        margin-top: 0px;
+    }
     form{
         width: 100%;
         padding: 0px;
@@ -107,13 +151,28 @@ input{
     }
     form input[type="textarea"]{
         width: 99%;
+        margin-bottom: 10px;
     }
     #outputArea{
         background-color: rgba(245, 222, 179, 0.219);
     }
+    #goback{
+        color: white;
+        background-color: rgb(114, 108, 102);
+        border: 2px solid grey;
+    }
+    #goback:hover{
+        
+        background-color: lightblue;
+    }
+    #switchCrypt{
+        padding-top: 10px;
+    }
 }
 @media only screen and (min-width: 501px) {
-    form{
+
+    .main{
+        background-color: rgba(0, 0, 0, 0);
         width: 600px;
         /* height: 480px; */
         padding: 20px;

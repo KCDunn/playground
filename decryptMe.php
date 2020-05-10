@@ -1,6 +1,6 @@
 <?php
 
-$output = "Decrypted messages will show up here!";
+$output = "";
 $encrypted = "";
 $decrypted = "";
 $letters = array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
@@ -72,14 +72,11 @@ if (isset($_POST['encryptMessage'])) {
 }
 
 
-if (isset($_POST['decryptMessage'])) {
-    $decrypted = $_POST['decryptMessage'];
-    $output = "Decrypted Message: $decrypted";
-    
-    
+// if (isset($_POST['decryptMessage'])) {
+//     $decrypted = $_POST['decryptMessage'];
+//     $output = "Decrypted Message: $decrypted";
+// }
 
-
-}
 echo <<<_END
 
 <!DOCTYPE html>
@@ -118,17 +115,18 @@ echo <<<_END
 _END;
 
 echo <<<_END
-    <form id="encrpt" method="post" action="decryptMe.php">
     <h1 id="title">ENCRYPT-O-MATIC</h1>
     <div id="switchCrypt">
-    <a href="encryptMe.php" id="encrypt">Encrypt</a><a id="thisPage" href="decryptMe.php" id="decrypt">Decrypt</a>
-    <br>
-    <br>
-    <h3>Decrypt Me</h3>
-    <p>Decrypt message using the same number it was encrypted with.</p>
+        <a href="encryptMe.php" id="encrypt" class="off">Encrypt</a><a id="thisPage" href="decryptMe.php" id="decrypt">Decrypt</a>
+        <br>
+        <br>
+        <h3>Decrypt Me</h3>
+        <p>Paste encrypted message here and decrypt.</p>
     </div>
+
+    <form id="encrpt" method="post" action="decryptMe.php">
     <input type="textarea" cols="70" rows="150" wrap="soft" name="encryptMessage">
-    <p>Enter an encryption value</p>
+    <p>Enter the secret slide number</p>
     <p class="enterNum">(between -20 and +20)</p>
     <input type="number" name="shiftVal" min="-20" max="20">
     <br>
@@ -139,6 +137,9 @@ echo <<<_END
             $output
         </div>
     </form>
+    <div id="cryptBottom">
+        <p>Decrypted message will appear above</p>
+    </div>
 <br>
     
 
