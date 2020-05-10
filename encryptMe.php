@@ -1,6 +1,6 @@
 <?php
 
-$output = "Encrypted or Decrypted messages show up here!";
+$output = "Encrypted messages show up here!";
 $encrypted = "";
 $decrypted = "";
 $letters = array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
@@ -10,7 +10,7 @@ $lettersCount = count($letters);
 $shiftVal = 0;
 
 if (isset($_POST['encryptMessage'])) {
-    $encrypted = $_POST['encryptMessage'];
+    $encrypted =  trim(preg_replace('/\s+/',' ', $_POST['encryptMessage']));
     $shiftVal = intval($_POST['shiftVal']);
     $temp = 0;
     $tempFill = "";
@@ -18,53 +18,54 @@ if (isset($_POST['encryptMessage'])) {
     
     for($i = 0; $i <= $encryptLength - 1; ++$i){
         $thisDecimal = ord($encrypted[$i]);
-       
+        $thisNum = $thisDecimal + $shiftVal;
+        
         
 
-        if($thisDecimal >= 33 && $thisDecimal <= 122){
-
-            
-
-            $thisNum = $thisDecimal + $shiftVal;
-
-            if($thisNum > 122){
-                $tempFill .= chr($thisDecimal - 90 + $shiftVal);
-            }
-            elseif($thisNum < 33){
-                $tempFill .= chr($thisDecimal + 90 + $shiftVal);
+        if($thisDecimal >= 33 && $thisDecimal <= 122)
+        {
+            if($i % 2 == 0 && $shiftVal != 0)
+            {
+                if($thisNum + 2 > 122){
+                    $tempFill .= chr($thisNum - 90 + 2);
+                    
+                }elseif($thisNum + 2 < 33){
+                    $tempFill .= chr($thisNum + 92);
+                }
+                else{
+                    $tempFill .= chr($thisNum + 2);
+                }
             }
             else{
-                $tempFill .= chr($thisDecimal + $shiftVal);
+                if($thisNum > 122){
+                    $tempFill .= chr($thisNum - 90);
+                    
+                }elseif($thisNum < 33){
+                    $tempFill .= chr($thisNum + 90);
+                }
+                else{
+                    $tempFill .= chr($thisNum);
+                }
             }
+            
+
+            // $thisNum = $thisDecimal + $shiftVal;
+
+            // if($thisNum > 122){
+            //     $tempFill .= chr($thisDecimal + $shiftVal - 90 );
+            // }
+            // elseif($thisNum < 33){
+            //     $tempFill .= chr($thisDecimal + 90 + $shiftVal);
+            // }
+            // else{
+            //     $tempFill .= chr($thisDecimal + $shiftVal);
+            // }
         }
         else{
             $tempFill .= chr($thisDecimal);
         }
-    //     if($thisDecimal >= 32 && $thisDecimal <= 63){
-           
-            
-    //         if($thisNum > 63){
-    //             $tempFill .= chr($thisDecimal - 31 + $shiftVal);
-    //         }
-    //         elseif($thisNum < 32){
-    //             $tempFill .= chr($thisDecimal + 31 + $shiftVal);
-    //         }
-    //         else{
-    //             $tempFill .= chr($thisDecimal += $shiftVal);
-    //         }
-    //     }
-
-    //     if($thisDecimal >= 65 && $thisDecimal <= 122){
-    //         if($thisNum > 122){
-    //             $tempFill .= chr($thisDecimal - 57 + $shiftVal);
-    //         }
-    //         elseif($thisNum < 64){
-    //             $tempFill .= chr($thisDecimal + 57 + $shiftVal);
-    //         }
-    //         else{
-    //             $tempFill .= chr($thisDecimal += $shiftVal);
-    //         }
-    //     }
+        
+    
         
     }
     $output = $tempFill;
@@ -114,19 +115,20 @@ echo <<<_END
 
 
 <div id="gameArea">
-<h1 id="title">Encrypt Me</h1>
+
 _END;
 
 echo <<<_END
     <form id="encrpt" method="post" action="encryptMe.php">
+    <h1 id="title">ENCRYPT-O-MATIC</h1>
     <div id="switchCrypt">
-        <a href="encryptMe.php" id="encrypt">Encrypt</a>|
-        <a href="decryptMe.php" id="decrypt">Decrypt</a>
+        <a id="thisPage" href="encryptMe.php" id="encrypt">Encrypt</a><a href="decryptMe.php" id="decrypt">Decrypt</a>
         <br>
         <br>
-        <h3>Encrypt a secret message.</h3>
+        <h3>Encrypt Me</h3>
+        <p>Encrypt a secret message using a secret number!<p>
     </div>
-    <input type="textarea" cols="200" rows="550" wrap="soft" name="encryptMessage">
+    <input id="textInput" type="textarea" cols="200" rows="550" wrap="soft" name="encryptMessage">
     <p>Enter an encryption value</p>
     <p class="enterNum">(between -20 and +20)</p>
     <input type="number" name="shiftVal" min="-20" max="20">
@@ -134,9 +136,7 @@ echo <<<_END
     <br>
     <input type="submit" value="Encrypt" >
 
-    <div class="outputArea">
-            $output
-        </div>
+        <div id="outputArea"><p id="textOutput">$output</p></div>
     </form>
 <br>
     
@@ -144,30 +144,14 @@ echo <<<_END
 
 _END;
 
-// echo <<<_END
-// <form id="decrpt" method="post" action="encryptMe.php">
-//     <p>Decrypt your secret message.</p><br>
-//     <input type="textarea" cols="70" rows="150" name="decryptMessage">
-//     <p>Enter an encryption value, between -20 and +20.</p>
-//     <input type="number" name="shiftVal" min="-20" max="20">
-//     <br>
-//     <br>
 
-//     <input type="submit" value="Decrypt">
-
-//     <div class="outputArea">
-//         $output
-//     </div>
-// </form>
-// <br>
-    
-
-
-// _END;
 
 echo <<<_END
+    
     </div>
+    <a id="goback" href="index.php">Back to Games</a>
 </div>
+
 </body>
 </html>
 _END;
