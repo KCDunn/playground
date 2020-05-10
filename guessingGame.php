@@ -33,7 +33,7 @@ if (isset($_POST['theNumber']) && isset($_SESSION['secretNumber'])) {
     else{
         $_SESSION['count'] += 1;
         $count = $_SESSION['count'];
-        $output = "<p class='win'>You Win!</p><p class='win>The answer was $secretNumber!</p><br><p>You guessed in $count tries!</p>";
+        $output = "<p class='win'>You Win!</p><p class='win'>The answer was $secretNumber!<br>You guessed in $count tries!</p>";
         session_destroy();
         $newGame = true;
         // $_SESSION['secretNumber'] = rand(1,100);
@@ -85,26 +85,26 @@ echo <<<_END
 
     <link rel="stylesheet" type="text/css" href="css/guessing.css">
 	<script src="../jquery-3.5.0.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(document.body).ready(function() {
+    // <script>
+    //     $(document).ready(function(){
+    //         $(document.body).ready(function() {
                 
-                $(".main").fadeIn(800);
-            });
+    //             $(".main").fadeIn(800);
+    //         });
 
-            $(".link").click(function() {
-                event.preventDefault();
+    //         $(".link").click(function() {
+    //             event.preventDefault();
 
-                newLocation = this.href;
-                $(".main").fadeOut(200);
-                $("h1").fadeOut(300, newPage);
-            });
+    //             newLocation = this.href;
+    //             $(".main").fadeOut(200);
+    //             $("h1").fadeOut(300, newPage);
+    //         });
 
-            function newPage() {
-                window.location = newLocation;
-            }
-        });
-	</script>
+    //         function newPage() {
+    //             window.location = newLocation;
+    //         }
+    //     });
+	// </script>
 	
 
 </head>
@@ -130,7 +130,7 @@ if($newGame == false){
     </form>
     <br>
     
-    </div>
+</div>
     
     
         
@@ -148,19 +148,22 @@ if($newGame == true) {
         <input type="hidden" name="theNumber" min="1" max="100">
         <br>
         <br>
-        <input id="newGame" type="submit" value="Play Again">
-        </form>
-        <br>
-        </div>
         <p>$output</p>
         <br>
-        <a href="../"><button id="goback">Back to Games</button></a>
+        <input id="newGame" type="submit" value="Play Again">
+        <br>
+        </form>
+        <br>
+    </div>
+        
+        
 _END;
 }
 
 echo <<<_END
-<div id="guess_count"><p>$count Guesses</p></div>
-</div>
+        <div id="guess_count"><p>$count Guesses</p></div>
+    </div>
+    <a id="goback" href="index.php">Back to Games</a>
 </body>
 </html>
 _END;
