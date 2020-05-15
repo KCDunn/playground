@@ -7,8 +7,8 @@ echo <<<_END
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Games! | kevincdunn</title>
-	<meta name="description" content="List if games and web applications.">
+	<title>Playground | kevincdunn</title>
+	<meta name="description" content="List of games and web applications.">
 	<meta name="keywords" content="games, fun, entertainment">
 	<meta name="author" content="Kevin Dunn">
 	<meta name="copyright" content="2020">
@@ -22,7 +22,7 @@ echo <<<_END
     <link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="css/gameslist.css">
-    <script src="../jquery-3.5.0.min.js"></script>
+    <script src="js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
@@ -48,10 +48,10 @@ echo <<<_END
 </head>
 <body>
 <div id="wrapper">
-<h1 id="title">Come Play My Games!</h1>
+<h1 id="title"><a href="../kevincdunn"><span>KCD's</span></a> PLAYGROUND!</h1>
+
 
     <div class="main">
-        
         
         <div class="game_item">
             <h2>Rad Libs</h2>
@@ -61,7 +61,7 @@ echo <<<_END
         <div class="game_item">
             <h2>Tru Story</h2>
             <p>Read and write true stories based on selected topics</p>
-            <a class="go_to link" href="guessingGame.php">Tru Story</a>
+            <a class="go_to link" href="../truestory">Tru Story</a>
         </div>
         <div class="game_item">
             <h2>Guessing Game</h2>

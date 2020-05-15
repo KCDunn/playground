@@ -107,7 +107,7 @@ echo <<<_HEAD
 
 	<link rel="stylesheet" type="text/css" href="../css/radlibs.css">
 	<script src="../js/radlibs.js"></script>
-	<script src="../../jquery-3.5.0.min.js"></script>
+	<script src="../js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {

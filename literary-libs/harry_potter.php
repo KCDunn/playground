@@ -1,7 +1,7 @@
 <?php
 require_once('../php/radlibsVal.php');
 $noun1 = $verb1 = $noun2 = $noun3 = $adjective1 = $adjective2 = $friend = "";
-$fail_noun1 = $fail_noun2 = $fail_noun3 = $fail_verb1 = $fail_adj1 = $fail_adj2= $fail_friend = "";
+$fail_noun1 = $fail_noun2 = $fail_noun3 = $fail_verb1 = $fail_adj1 = $fail_adj2 = $fail_friend = "";
 
 $output = "";
 $formHide = "inline-block";
@@ -114,7 +114,7 @@ echo <<<_HEAD
 
 	<link rel="stylesheet" type="text/css" href="../css/radlibs.css">
 	<script src="../js/radlibs.js"></script>
-	<script src="../../jquery-3.5.0.min.js"></script>
+	<script src="../js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {

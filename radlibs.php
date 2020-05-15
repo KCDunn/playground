@@ -38,7 +38,7 @@ echo <<<_HEAD
 	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/radlibs_select.css">
-	<script src="../jquery-3.5.0.min.js"></script>
+	<script src="js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
