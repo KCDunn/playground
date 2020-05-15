@@ -38,7 +38,7 @@ echo <<<_HEAD
 	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/radlibs_select.css">
-	<script src="js/jquery-3.5.0.min.js"></script>
+	<script src="../js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
@@ -74,19 +74,19 @@ echo <<<_BODY
             <h2>Literary Libs</h2>
             <p>These Rad Libs are based on excerpts from popular literature.</p>
             <ul>
-                <a href="literary-libs/harry_potter.php"><li>Harry Potter</li></a>
-                <a href="literary-libs/lotr.php"><li>Lord of the Rings</li></a>
-                <a href="literary-libs/moby_dick.php"><li>Moby Dick</li></a>
-                <a href="literary-libs/dracula.php"><li>Dracula</li></a>
+                <a href="lit_harry_potter.php"><li>Harry Potter</li></a>
+                <a href="lit_lotr.php"><li>Lord of the Rings</li></a>
+                <a href="lit_moby_dick.php"><li>Moby Dick</li></a>
+                <a href="lit_dracula.php"><li>Dracula</li></a>
             </ul>
         </div>
         <div class="game_theme rock">
             <h2>Rock Libs</h2>
             <p>Check out these new lyrics to your favorite Hits, from yesterday and today!</p>
             <ul>
-                <a href="rockin-libs/led_zepplin.php"><li>Led Zepplin</li></a>
-                <a href="rockin-libs/aerosmith.php"><li>Aerosmith</li></a>
-                <a href="rockin-libs/commodores.php"><li>Commodores</li></a>
+                <a href="rock_led_zepplin.php"><li>Led Zepplin</li></a>
+                <a href="rock_aerosmith.php"><li>Aerosmith</li></a>
+                <a href="rock_commodores.php"><li>Commodores</li></a>
                 
             </ul>
             
@@ -95,8 +95,8 @@ echo <<<_BODY
             <h2>Informative Libs</h2>
             <p>Keep yourself informed on these most important topics!</p>
             <ul>
-                <a href="informative-libs/weather-alert.php"><li>Severe Weather Alert</li></a>
-                <a href="informative-libs/pool-rules.php"><li>Pool Rules</li></a>
+                <a href="inform_weather_alert.php"><li>Severe Weather Alert</li></a>
+                <a href="inform_poolrules.php"><li>Pool Rules</li></a>
                 
             </ul>
         </div>
@@ -104,15 +104,15 @@ echo <<<_BODY
             <h2>Pirate Libs</h2>
             <p>All things pirates like!</p>
             <ul>
-                <a href="pirate-libs/pirates_life.php"><li>Pirates Life</li></a>
-                <a href="pirate-libs/bottles.php"><li>Bottles</li></a>
-                <a href="pirate-libs/around_the_world.php"><li>Around the World</li></a>
+                <a href="pirate_life.php"><li>Pirates Life</li></a>
+                <a href="pirate_bottles.php"><li>Bottles</li></a>
+                <a href="pirate_around_the_world.php"><li>Around the World</li></a>
             </ul>
         </div>
 
     </div>
 </div>
-<a id="goback" href="index.php">Back to Games</a>
+<a id="goback" href="../">Back to Playground</a>
 </body>
 </html>
 

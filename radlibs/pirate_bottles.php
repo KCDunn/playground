@@ -1,5 +1,5 @@
 <?php
-require_once('../php/radlibsVal.php');
+require_once('php/radlibsVal.php');
 $noun1 = $noun2 = $outputTitle = "";
 $songNum = 3;
 $fail_noun1 = $fail_noun2 = $fail_songNum = "";
@@ -78,8 +78,8 @@ echo <<<_HEAD
 	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
 
 
-	<link rel="stylesheet" type="text/css" href="../css/radlibs.css">
-	<script src="../js/radlibs.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/radlibs.css">
+	<script src="js/radlibs.js"></script>
 	<script src="../js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -125,7 +125,7 @@ echo <<<_BODY
 <div class="main">
 <h1>Pirate Libs</h1>
 
-<form style="display:$formHide;" method="post" action="bottles.php" onSubmit="return validate(this)">
+<form style="display:$formHide;" method="post" action="pirate_bottles.php" onSubmit="return validate(this)">
 	<label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun1</p>
 	<input type="text" name="noun1" value="$noun1">
 	<label class="tooltip">Type a Noun (plural):<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun2</p>
@@ -146,8 +146,8 @@ echo <<<_BODY
     <h2>$outputTitle</h2>
     <br>
     <p>$output</p>
-    <a href="../radlibs.php"><button id="newGame">Another Lib</button></a>
-    <a href="../index.php"><button id="goBack">More Games</button></a>
+    <a href="index.php"><button id="newGame">Another Lib</button></a>
+    <a href="../"><button id="goBack">More Games</button></a>
 </div>
 
 </div>

@@ -152,7 +152,7 @@ _END;
 echo <<<_END
     
     </div>
-    <a id="goback" href="index.php">Back to Games</a>
+    <a id="goback" href="index.php">Back to Playground</a>
 </div>
 
 </body>

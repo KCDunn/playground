@@ -1,5 +1,5 @@
 <?php
-require_once('../php/radlibsVal.php');
+require_once('php/radlibsVal.php');
 $noun1 = $noun2 = $verb1 = $adverb = "";
 $fail_noun1 = $fail_noun2 = $fail_verb1 = $fail_adv = "";
 
@@ -84,8 +84,8 @@ echo <<<_HEAD
 	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
 
 
-	<link rel="stylesheet" type="text/css" href="../css/radlibs.css">
-	<script src="../js/radlibs.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/radlibs.css">
+	<script src="js/radlibs.js"></script>
 	<script src="../js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -131,7 +131,7 @@ echo <<<_BODY
 <div class="main">
 <h1>Pirate Libs</h1>
 
-<form style="display:$formHide;" method="post" action="around_the_world.php" onSubmit="return validate(this)">
+<form style="display:$formHide;" method="post" action="pirate_around_the_world.php" onSubmit="return validate(this)">
 	<label class="tooltip">Something Pirates Covet:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun1</p>
 	<input type="text" name="noun1" value="$noun1">
 	<label class="tooltip">Type a Verb (passed tense):<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb1</p>
@@ -154,8 +154,8 @@ echo <<<_BODY
     <h2>$outputTitle</h2>
     <br>
     <p>$output</p>
-    <a href="../radlibs.php"><button id="newGame">Another Lib</button></a>
-    <a href="../index.php"><button id="goBack">More Games</button></a>
+    <a href="index.php"><button id="newGame">Another Lib</button></a>
+    <a href="../"><button id="goBack">More Games</button></a>
 </div>
 
 </div>

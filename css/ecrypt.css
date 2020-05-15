@@ -24,7 +24,7 @@ form{
     /* background-color: rgb(139, 174, 185); */
     background-color: rgba(238, 237, 237, 0.336);
     background-blend-mode: exclusion;
-    background-image: url(../../img/Steel1.jpeg);
+    background-image: url(../img/Steel1.jpeg);
     background-size: cover;
 }
     form input[type="textarea"]{
@@ -75,7 +75,7 @@ input{
     /* background-color: rgba(211, 211, 211, 0.514); */
     background-color: rgba(238, 237, 237, 0.336);
     background-blend-mode: exclusion;
-    background-image: url(../../img/Steel1.jpeg);
+    background-image: url(../img/Steel1.jpeg);
     background-size: cover;
     padding-top: 8px;
     width: 100%;
@@ -106,7 +106,7 @@ input{
 #cryptBottom{
     background-color: rgba(252, 250, 250, 0.336);
     background-blend-mode: exclusion;
-    background-image: url(../../img/Steel1.jpeg);
+    background-image: url(../img/Steel1.jpeg);
     background-size: cover;
     padding-top: 8px;
     padding-bottom: 8px;

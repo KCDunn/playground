@@ -56,7 +56,7 @@ echo <<<_END
         <div class="game_item">
             <h2>Rad Libs</h2>
             <p>Like Mad Libs, but radder! Ok well, its Mad Libs.</p>
-            <a class="go_to link" href="radlibs.php">Rad Libs</a>
+            <a class="go_to link" href="radlibs/">Rad Libs</a>
         </div>
         <div class="game_item">
             <h2>Tru Story</h2>

@@ -1,7 +1,7 @@
 <?php
-require_once('../php/radlibsVal.php');
-$noun1 = $verb1 = $noun2 = $verb2 = $noun3 = $verb3 = $adjective1 = $adjective2 = $adjective3 = $adverb = $writer = "";
-$fail_noun1 = $fail_noun2 = $fail_noun3 = $fail_verb1 = $fail_verb2 = $fail_verb3 = $fail_adj1 = $fail_adj2 = $fail_adj3 = $fail_adv = $fail_writer = "";
+require_once('php/radlibsVal.php');
+$noun1 = $verb1 = $noun2 = $noun3 = $adjective1 = $adjective2 = $friend = "";
+$fail_noun1 = $fail_noun2 = $fail_noun3 = $fail_verb1 = $fail_adj1 = $fail_adj2 = $fail_friend = "";
 
 $output = "";
 $formHide = "inline-block";
@@ -14,9 +14,21 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
     $verb1 = fix_string($_POST['verb1']);
     $adjective1 = fix_string($_POST['adjective1']);
     $adjective2 = fix_string($_POST['adjective2']);
-	$writer = fix_string($_POST['writer']);
+	$friend = fix_string($_POST['friend']);
 
 
+	// if (isset($_POST['noun']))
+	// 	$noun = fix_string($_POST['noun']);
+	// if (isset($_POST['verb']))
+	// 	$verb = fix_string($_POST['verb']);
+	// if (isset($_POST['adjective']))
+	// 	$adjective = fix_string($_POST['adjective']);
+	// if (isset($_POST['pronoun']))
+	// 	$pronoun = fix_string($_POST['pronoun']);
+	// if (isset($_POST['adverb']))
+	// 	$adverb = fix_string($_POST['adverb']);
+	// if (isset($_POST['friend']))
+	// 	$friend = fix_string($_POST['friend']);
 
     $fail = validate_noun($noun1);
     $fail .= validate_noun($noun2);
@@ -24,26 +36,26 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
     $fail .= validate_word($verb1);
     $fail .= validate_adjective($adjective1);
     $fail .= validate_adjective($adjective2);
-	$fail .= validate_name($writer);
+	$fail .= validate_name($friend);
+
+	// $fail_noun = validate_noun($noun);
+	// $fail_verb .= validate_verb($verb);
+	// $fail_adj .= validate_adjective($adjective);
+	// $fail_pron .= validate_pronoun($pronoun);
+	// $fail_adv .= validate_adverb($adverb);
+	// $fail_friend .= validate_friend($friend);
 
 	if ($fail == "")
 	{
-        $output = "<h2>Commodores - Brick House!</h2><br><h3>Lyrics edited by $writer</h3><br>
-        Ow, she's a $noun1... $noun2<br>
-        She's $adjective1-$adjective1, just lettin' it all $verb1 out<br>
-        She's a $noun1... $noun2<br>
-        That lady's $adjective2, and that's a fact<br>
-        Ain't holding nothing back<br>
-        Ow, she's a $noun1... $noun2<br>
-        Well put-together, everybody knows<br>
-        This is how the story goes...<br>
-        <br><br>
-        
-        ";
+        $output = "<h2>Harry Potter</h2><p>Adaptation of the first of J.K. Rowling's $adjective1 " . $noun2 . "'s novels about $friend, 
+        who learns on his eleventh birthday that he is the orphaned son of two powerful $noun1 and possesses 
+        $adjective2 magical powers of his own. He is $verb1 from his life as an unwanted child to become a $noun2 at Hogwarts, 
+        an English boarding school for $noun1. There, he meets several friends who become his closest allies 
+        and help him discover the truth about his parents' mysterious " . $noun3 . ".</p>";
 
 		$formHide = "none";
 		$outputHide = "inline-block";
-		$fail_noun1 = $fail_noun2 = $fail_verb1 = $fail_adj1 =$fail_adj2 = $fail_writer = "";
+		$fail_noun1 = $fail_noun2 = $fail_noun3 = $fail_verb1 = $fail_adj = $fail_friend = "";
 	}
 
 	if ($fail != "")
@@ -54,11 +66,29 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective1'
         $fail_verb1 .= validate_word($verb1);
         $fail_adj1 .= validate_adjective($adjective1);
         $fail_adj2 .= validate_adjective($adjective2);
-		$fail_writer .= validate_name($writer);
+		$fail_friend .= validate_name($friend);
 	}
 }
 
 
+
+
+
+// if( isset($_POST['noun']) && issett($_POST['verb']) && isset($_POST['adjective']) && isset($_POST['pronoun']) ) {
+// if( isset($_POST['noun']) ) {
+// 	$noun = $_POST['noun'];
+// 	$verb = $_POST['verb'];
+// 	$adjective = $_POST['adjective'];
+// 	$pronoun = $_POST['pronoun'];
+// 	$friend = $_POST['friend'];
+
+//     $output = "Hello $friend, this is a $adjective test sentence for Radlibs!  I hope you like $noun's, because $pronoun are totaly $adjective right now!";
+//     $formHide = "none";
+//     $outputHide = "inline-block";
+// }
+// else{
+// 	$output = "One of the fields has been left empty!";
+// }
 
 
 echo <<<_HEAD
@@ -82,8 +112,8 @@ echo <<<_HEAD
 	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
 
 
-	<link rel="stylesheet" type="text/css" href="../css/radlibs.css">
-	<script src="../js/radlibs.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/radlibs.css">
+	<script src="js/radlibs.js"></script>
 	<script src="../js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -113,7 +143,7 @@ echo <<<_HEAD
             fail += validateVerb(form.verb1.value)
             fail += validateAdjective(form.adjective1.value)
             fail += validateAdjective(form.adjective2.value)
-			fail += validateName(form.writer.value)
+			fail += validateName(form.friend.value)
 
 			if (fail == "") return true
 			else { alert(fail); return false }
@@ -131,23 +161,27 @@ echo <<<_BODY
 <div id="wrapper">
 
 <div class="main">
-<h1>Rockin Libs</h1>
+<h1>Literary RadLibs</h1>
 
-<form style="display:$formHide;" method="post" action="commodores.php" onSubmit="return validate(this)">
-	<label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun1</p>
+<form style="display:$formHide;" method="post" action="lit_harry_potter.php" onSubmit="return validate(this)">
+	<label class="tooltip">Type a Noun (plural):<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun1</p>
 	<input type="text" name="noun1" value="$noun1">
-	<label class="tooltip">Type a Verb:<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb1</p>
+	<label class="tooltip">Type a Verb (past tense):<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb1</p>
 	<input type="text" name="verb1" value="$verb1">
 	<label class="tooltip">Type an Adjective:<span class="tooltiptext">Used to modify a noun. ('hot' potato, 'cold' ice, 'green' eggs) <a class="tipRef" style="color: lightblue;" href="https://coolestwords.com/cool-adjectives/" target="blank">Cool Adjectives</a></span></label><p class="err">$fail_adj1</p>
 	<input type="text" name="adjective1" value="$adjective1">
 	<label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun2</p>
     <input type="text" name="noun2" value="$noun2">
+    
+	
     <label class="tooltip">Type an Adjective:<span class="tooltiptext">Used to modify a noun. ('hot' potato, 'cold' ice, 'green' eggs) <a class="tipRef" style="color: lightblue;" href="https://coolestwords.com/cool-adjectives/" target="blank">Cool Adjectives</a></span></label><p class="err">$fail_adj2</p>
-    <input type="text" name="adjective2" value="$adjective2">
+        <input type="text" name="adjective2" value="$adjective2">
     <label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun3</p>
     <input type="text" name="noun3" value="$noun3">
-	<label class="tooltip">Type your Name:<span class="tooltiptext">Or the name of someone you know.</span></label><p class="err">$fail_writer</p>
-	<input type="text" name="writer" value="$writer">
+    
+    
+	<label class="tooltip">Type your Name:<span class="tooltiptext">Or the name of someone you know.</span></label><p class="err">$fail_friend</p>
+	<input type="text" name="friend" value="$friend">
 	<br>
 
 	<div id="error" style="display:$errorHide;">Sorry, the following errors were found!<br>
@@ -160,8 +194,8 @@ echo <<<_BODY
 
 <div id="output" style="display:$outputHide;">
     $output
-    <a href="../radlibs.php"><button id="newGame">Another Lib</button></a>
-    <a href="../index.php"><button id="goBack">More Games</button></a>
+    <a href="index.php"><button id="newGame">Another Lib</button></a>
+    <a href="../"><button id="goBack">More Games</button></a>
 </div>
 
 </div>

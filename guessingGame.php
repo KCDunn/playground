@@ -84,27 +84,15 @@ echo <<<_END
 
 
     <link rel="stylesheet" type="text/css" href="css/guessing.css">
-	<script src="../jquery-3.5.0.min.js"></script>
-    // <script>
-    //     $(document).ready(function(){
-    //         $(document.body).ready(function() {
-                
-    //             $(".main").fadeIn(800);
-    //         });
+    <script src="../jquery-3.5.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            
+        }
+    </script>
 
-    //         $(".link").click(function() {
-    //             event.preventDefault();
-
-    //             newLocation = this.href;
-    //             $(".main").fadeOut(200);
-    //             $("h1").fadeOut(300, newPage);
-    //         });
-
-    //         function newPage() {
-    //             window.location = newLocation;
-    //         }
-    //     });
-	// </script>
+    
 	
 
 </head>
@@ -121,7 +109,7 @@ if($newGame == false){
     echo <<<_END
     <form method="post" action="guessingGame.php">
     <p>Enter a number</p><p>(between 1 and 100)</p><br>
-    <input type="number" name="theNumber" min="1" max="100">
+    <input id="numInput" type="number" name="theNumber" min="1" max="100">
     <br>
     <br>
     <p>$output</p>
@@ -163,7 +151,7 @@ _END;
 echo <<<_END
         <div id="guess_count"><p>$count Guesses</p></div>
     </div>
-    <a id="goback" href="index.php">Back to Games</a>
+    <a id="goback" href="index.php">Back to Playground</a>
 </body>
 </html>
 _END;
