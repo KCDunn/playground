@@ -85,12 +85,7 @@ echo <<<_END
 
     <link rel="stylesheet" type="text/css" href="css/guessing.css">
     <script src="../jquery-3.5.0.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            
-            
-        }
-    </script>
+    
 
     
 	
@@ -133,7 +128,7 @@ if($newGame == true) {
         
         <form method="post" action="guessingGame.php">
         <br>
-        <input type="hidden" name="theNumber" min="1" max="100">
+        <input id="inputNum" type="number" name="theNumber" min="1" max="100">
         <br>
         <br>
         <p>$output</p>
@@ -152,6 +147,11 @@ echo <<<_END
         <div id="guess_count"><p>$count Guesses</p></div>
     </div>
     <a id="goback" href="index.php">Back to Playground</a>
+<script>
+    window.onload = function() {
+        document.getElementById('nputNum').focus();
+    };
+</script>
 </body>
 </html>
 _END;

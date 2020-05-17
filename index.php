@@ -92,6 +92,9 @@ _END;
 echo <<<_END
     </div>
     </div>
+    <script>
+
+    </script?
 </body>
 </html>
 _END;
