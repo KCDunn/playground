@@ -105,6 +105,7 @@ a #goback{
     body{
         background-color: rgb(44, 44, 44);
         padding-top: 20px;
+        
     }
     .main{
         background-color: rgb(226, 182, 71);
@@ -112,6 +113,7 @@ a #goback{
         height: 350px;
         margin: auto;
         border-radius: 10px;
+        font-size: 20px
     }
     input[type=submit]{
         /* background-color: rgba(0, 0, 255, 0.144); */

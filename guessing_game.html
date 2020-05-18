@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guessing Game | kevincdunn</title>
+	<meta name="description" content="Guess a number between 1 and 100.">
+	<meta name="keywords" content="guessing game">
+	<meta name="author" content="Kevin Dunn">
+	<meta name="copyright" content="2018">
+    
+    
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Nobile&display=swap" rel="stylesheet"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Capriola&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="css/guessing.css">
+    <script src="../jquery-3.5.0.min.js"></script>
+    <script>
+
+    </script>
+
+    
+	
+
+</head>
+<body>
+<div class="main">
+    <h1>Guessing Game</h1>
+
+
+    <div class="gameArea">
+        <form method="post">
+            <p>Enter a number</p>
+            <p>(between 1 and 100)</p><br>
+            <input id="numInput" type="number" name="theNumber" min="1" max="100">
+            <br>
+            <br>
+            <p>$output</p>
+            <br>
+            <input type="submit" value="Guess">
+            </form>
+            <br>
+            
+    </div>
+    <div id="guess_count"><p>$count Guesses</p></div>
+</div>
+
+<a id="goback" href="index.php">Back to Playground</a>
+
+<script>
+window.onload = function() {
+    document.getElementById('numInput').focus();
+};
+</script>
+
+</body>
+</html>

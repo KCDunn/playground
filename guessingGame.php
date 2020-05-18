@@ -104,7 +104,7 @@ if($newGame == false){
     echo <<<_END
     <form method="post" action="guessingGame.php">
     <p>Enter a number</p><p>(between 1 and 100)</p><br>
-    <input id="numInput" type="number" name="theNumber" min="1" max="100">
+    <input id="inputNum" type="number" name="theNumber" min="1" max="100">
     <br>
     <br>
     <p>$output</p>
@@ -149,7 +149,7 @@ echo <<<_END
     <a id="goback" href="index.php">Back to Playground</a>
 <script>
     window.onload = function() {
-        document.getElementById('nputNum').focus();
+        document.getElementById('inputNum').focus();
     };
 </script>
 </body>

@@ -26,15 +26,16 @@ echo <<<_END
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
-                $("#title").delay(100).fadeIn(800);
-                $(".main").delay(400).fadeIn(800);
+
+                $("#title").delay(100).animate({opacity: "1.0"});
+                $("#main").delay(300).animate({opacity: "1.0"});
             });
 
             $(".link").click(function() {
                 event.preventDefault();
 
                 newLocation = this.href;
-                $(".main").fadeOut(200);
+                $("#main").fadeOut(200);
                 $("h1").fadeOut(300, newPage);
             });
 
@@ -47,12 +48,21 @@ echo <<<_END
 
 </head>
 <body>
+
 <div id="wrapper">
 <h1 id="title"><a href="../kevincdunn"><span>KCD's</span></a> PLAYGROUND!</h1>
 
 
-    <div class="main">
-        
+    <div id="main">
+
+    <script>
+        // document.getElementById('main').style.display = 'none';
+        // document.getElementById('title').style.display = 'none';
+
+        document.getElementById('main').style.opacity = '0';
+        document.getElementById('title').style.opacity = '0';
+    </script>
+
         <div class="game_item">
             <h2>Rad Libs</h2>
             <p>Like Mad Libs, but radder! Ok well, its Mad Libs.</p>
@@ -92,9 +102,6 @@ _END;
 echo <<<_END
     </div>
     </div>
-    <script>
-
-    </script?
 </body>
 </html>
 _END;

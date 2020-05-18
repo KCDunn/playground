@@ -42,14 +42,26 @@ echo <<<_HEAD
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
-                $("#wrapper").fadeIn(800);
+                $(".lit").delay(100).animate({opacity: '1.0'});
+                $(".rock").delay(250).animate({opacity: '1.0'});
+                $(".inform").delay(400).animate({opacity: '1.0'});
+                $(".other").delay(550).animate({opacity: '1.0'});
+                $("ul").delay(650).slideDown('slow', 'swing');
+                $('.1').delay(700).animate({opacity: '1.0'});
+                $('.2').delay(900).animate({opacity: '1.0'});
+                $('.3').delay(1200).animate({opacity: '1.0'});
+                $('.4').delay(1600).animate({opacity: '1.0'});
+                
             });
 
             $(".link").click(function() {
                 event.preventDefault();
 
                 newLocation = this.href;
-                $("").fadeOut(300, newPage);
+                $(".game_theme").animate({opacity: '0'});
+                $("h1").animate({opacity: '0'});
+                $("#goback").fadeOut(300, newPage);
+                
             });
 
             function newPage() {
@@ -68,25 +80,26 @@ echo <<<_BODY
 <div id="wrapper">
     
     <div id="main">
-
+    
 
         <div class="game_theme lit">
+        
             <h2>Literary Libs</h2>
             <p>These Rad Libs are based on excerpts from popular literature.</p>
             <ul>
-                <a href="lit_harry_potter.php"><li>Harry Potter</li></a>
-                <a href="lit_lotr.php"><li>Lord of the Rings</li></a>
-                <a href="lit_moby_dick.php"><li>Moby Dick</li></a>
-                <a href="lit_dracula.php"><li>Dracula</li></a>
+                <a class="link 1" href="lit_harry_potter.php"><li>Harry Potter</li></a>
+                <a class="link 2" href="lit_lotr.php"><li>Lord of the Rings</li></a>
+                <a class="link 3" href="lit_moby_dick.php"><li>Moby Dick</li></a>
+                <a class="link 4" href="lit_dracula.php"><li>Dracula</li></a>
             </ul>
         </div>
         <div class="game_theme rock">
             <h2>Rock Libs</h2>
             <p>Check out these new lyrics to your favorite Hits, from yesterday and today!</p>
             <ul>
-                <a href="rock_led_zepplin.php"><li>Led Zepplin</li></a>
-                <a href="rock_aerosmith.php"><li>Aerosmith</li></a>
-                <a href="rock_commodores.php"><li>Commodores</li></a>
+                <a class="link 1" href="rock_led_zepplin.php"><li>Led Zepplin</li></a>
+                <a class="link 2" href="rock_aerosmith.php"><li>Aerosmith</li></a>
+                <a class="link 3" href="rock_commodores.php"><li>Commodores</li></a>
                 
             </ul>
             
@@ -95,8 +108,8 @@ echo <<<_BODY
             <h2>Informative Libs</h2>
             <p>Keep yourself informed on these most important topics!</p>
             <ul>
-                <a href="inform_weather_alert.php"><li>Severe Weather Alert</li></a>
-                <a href="inform_poolrules.php"><li>Pool Rules</li></a>
+                <a class="link 1" href="inform_weather_alert.php"><li>Severe Weather Alert</li></a>
+                <a class="link 2" href="inform_poolrules.php"><li>Pool Rules</li></a>
                 
             </ul>
         </div>
@@ -104,15 +117,25 @@ echo <<<_BODY
             <h2>Pirate Libs</h2>
             <p>All things pirates like!</p>
             <ul>
-                <a href="pirate_life.php"><li>Pirates Life</li></a>
-                <a href="pirate_bottles.php"><li>Bottles</li></a>
-                <a href="pirate_around_the_world.php"><li>Around the World</li></a>
+                <a class="link 1" href="pirate_life.php"><li>Pirates Life</li></a>
+                <a class="link 2" href="pirate_bottles.php"><li>Bottles</li></a>
+                <a class="link 3" href="pirate_around_the_world.php"><li>Around the World</li></a>
             </ul>
         </div>
 
+        <script>
+        $('.game_theme').css('opacity', '0.0');
+        $('ul').css('display', 'none');
+        $('.1').css('opacity', '0');
+        $('.2').css('opacity', '0');
+        $('.3').css('opacity', '0');
+        $('.4').css('opacity', '0');
+        </script>
+
     </div>
 </div>
-<a id="goback" href="../">Back to Playground</a>
+<a class="link" id="goback" href="../">Back to Playground</a>
+
 </body>
 </html>
 
