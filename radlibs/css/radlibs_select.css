@@ -106,6 +106,7 @@ a{
         width: 98%;
         padding: 0px;
         margin: 0px;
+        margin: auto;
         /* display: flex; */
     }
     #main{
@@ -119,6 +120,7 @@ a{
     }
     .game_theme{
         width: 90%;
+        margin: auto;
         margin-bottom: 15px;
     }
 }
@@ -134,6 +136,7 @@ a{
         vertical-align: middle;
         width: 300px;
         /* height: 400px; */
+        margin: auto;
         margin: 20px;
 
     }

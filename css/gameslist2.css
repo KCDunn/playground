@@ -149,6 +149,7 @@ button{
             margin: auto;
         }
         #wrapper{
+            position: relative;
             background-color:rgba(43, 47, 53, 0.658);
             width: 100%;
         }
@@ -157,31 +158,35 @@ button{
             top: -20px;
         }
         h1{
-        width: 90%;
+        position: relative;
+        width: 200px;
         display: block;
         text-align: center;
         color: rgba(255, 148, 60, 0.884);
         /* text-shadow: 1px 1px 3px black; */
         /* box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.616); */
-        transform: rotate(-3deg);
+        transform: rotate(3deg);
         font-size: 2em;
-        display: none;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.486);
         /* z-index: 0; */
-        margin-left: 30px;
+        margin: auto;
+        padding-left: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         /* border: 1px solid black; */
         }
+        
         #title span{
             color: rgb(184, 183, 183);
             display: inline-block;
             /* background-color: rgba(165, 220, 245, 0.582); */
             transform: rotate(-20deg);
-            padding: 30px;
-            border-radius: 200%;
-            /* margin-left: -120px; */
-            position: relative;
-            left: 20px;
-            top: -35px;
+            padding: 10px;
+            border-radius: 100%;
+            /* margin-left: -15px; */
+            position: static;
+            left: 15px;
+            top: 5px;
             font-size: 0.5em;
             /* z-index: 1; */
             border: 8px dotted silver;
@@ -207,7 +212,7 @@ button{
         
 
     }
-    @media only screen and (max-width: 1030px) {
+    @media only screen and (max-width: 1270px) {
         .desktop{
             display: none;
         }

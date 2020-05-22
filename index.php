@@ -21,7 +21,7 @@ echo <<<_END
 	<!-- <link href="https://fonts.googleapis.com/css?family=Capriola&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" href="css/gameslist.css">
+    <link rel="stylesheet" type="text/css" href="css/gameslist2.css">
     <script src="js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -52,7 +52,6 @@ echo <<<_END
 <div id="wrapper">
 <h1 id="title"><a href="../kevincdunn"><span>KCD's</span></a> PLAYGROUND!</h1>
 
-
     <div id="main">
 
     <script>
@@ -71,7 +70,7 @@ echo <<<_END
         <div class="game_item">
             <h2>Tru Story</h2>
             <p>Read and write true stories based on selected topics</p>
-            <a class="go_to link" href="../truestory">Tru Story</a>
+            <a class="go_to link" href="https://truestory.kevincdunn.com">Tru Story</a>
         </div>
         <div class="game_item">
             <h2>Guessing Game</h2>
