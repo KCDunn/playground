@@ -332,31 +332,37 @@
 		var stopKey = "go";
 		
 		if(a.keyCode == 37){
+			event.preventDefault();
 			if(hero.x < 10+160)
 				hero.x += 0
 			else if(hero.x > 10+160)
 				hero.x -= 10; 
 		} else if(a.keyCode == 39){
+			event.preventDefault();
 			if(hero.x > 785+160)
 				hero.x += 0
 			else if(hero.x < 785+160)
 				hero.x += 10;
 		} else if(a.keyCode == 38){
+			event.preventDefault();
 			if(hero.y < 200)
 				hero.y += 0
 			else if(hero.y > 200)
 				hero.y -= 10;
 		} else if(a.keyCode == 40){
+			event.preventDefault();
 			if(hero.y > 625)
 				hero.y += 0;
 			else if( hero.y < 625)
 				hero.y += 10;
 		}else if(a.keyCode == 32){
+			event.preventDefault();
 			bullets.push({x: hero.x+6, y: hero.y-12});
 			displayBullets();
 			score -= 2;
 			bulletUse += 1;
 		}else if(a.keyCode == 13){
+			event.preventDefault();
 			if(stopKey == 'go'){
 				myStopFunction(myVar);
 				stopKey = 'stop';
@@ -369,6 +375,7 @@
 			}
 			document.getElementById('paused').style.opacity = '0.0';
 		}else if(a.keyCode == 8){
+			event.preventDefault();
 			if(stopKey == 'stop'){
 				myVar = setInterval(gameLoop, 50);
 				stopKey = 'go';
