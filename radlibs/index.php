@@ -54,19 +54,7 @@ echo <<<_HEAD
                 
             });
 
-            $(".link").click(function() {
-                event.preventDefault();
-
-                newLocation = this.href;
-                $(".game_theme").animate({opacity: '0'});
-                $("h1").animate({opacity: '0'});
-                $("#goback").fadeOut(300, newPage);
-                
-            });
-
-            function newPage() {
-                window.location = newLocation;
-            }
+            
         });
 	</script>
 	
