@@ -14,10 +14,15 @@ body{
     margin: auto;
 }
 #title{
+    font-family: 'Plaster', cursive;
     width: 100%;
     text-align: center;
     color: rgb(238, 238, 170);
     margin-bottom: 20px;
+
+}
+h1{
+    font-family: 'Plaster', cursive;
 }
 #gameArea{
     /* background: green; */

@@ -30,12 +30,9 @@ echo <<<_HEAD
 	<meta name="copyright" content="2018">
     
     
-	<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
-	<!-- <link href="https://fonts.googleapis.com/css?family=Nobile&display=swap" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Capriola&display=swap" rel="stylesheet"> -->
-	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
+    
+	<link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Roboto&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/radlibs_select.css">
 	<script src="../js/jquery-3.5.0.min.js"></script>

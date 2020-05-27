@@ -16,10 +16,13 @@ body{
 
 }
 h1{
+    font-family: 'BioRhyme', serif;
     text-align: center;
+    font-size: 2.6em;
 }
 
 .game_theme{
+    font-family: 'Roboto', sans-serif;
     display: inline-block;
     vertical-align: middle;
     /* width: 300px;

@@ -92,11 +92,7 @@ echo <<<_END
     
     
 	<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
-	<!-- <link href="https://fonts.googleapis.com/css?family=Nobile&display=swap" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Capriola&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="css/ecrypt.css">
 
@@ -115,12 +111,11 @@ echo <<<_END
 _END;
 
 echo <<<_END
-    <h1 id="title">ENCRYPT-O-MATIC</h1>
     <div id="switchCrypt">
         <a href="encryptMe.php" id="encrypt" class="off">Encrypt</a><a id="thisPage" href="decryptMe.php" id="decrypt">Decrypt</a>
         <br>
         <br>
-        <h3>Decrypt Me</h3>
+        <h1>Decrypt Me</h1>
         <p>Paste encrypted message here and decrypt.</p>
     </div>
 

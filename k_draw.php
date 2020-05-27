@@ -4,6 +4,8 @@ echo <<<_BODY
 <html>
     <head>
         <title>K Draw</title>
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <script src="js/jquery-3.5.0.min.js"></script>
         <style>
             *{
@@ -15,6 +17,7 @@ echo <<<_BODY
             }
             body{
                 background-color: rgb(51, 51, 51);
+                
             }
             #wrapper{
                 width: 730px;
@@ -25,12 +28,13 @@ echo <<<_BODY
                 border-radius: 8px;
             }
             h1{
+                font-family: 'Rock Salt', cursive;
                 display: block;
                 background-color: rgb(99, 99, 99);
-                width: 710px;
+                width: 689px;
                 margin-bottom: 5px;
                 padding: 2px;
-                padding-left: 8px;
+                padding-left: 30px;
                 border-radius: 5px;
                 color: white;
                 
@@ -61,7 +65,7 @@ echo <<<_BODY
                 margin: 10px;
             }
             #sizePallet{
-                width: 673px;
+                width: 671px;
                 background-color: rgb(99, 99, 99);
             }
             #sizePallet h3{
@@ -128,7 +132,9 @@ echo <<<_BODY
                 height: 8px;
             }
             h3{
+                font-family: 'Open Sans', sans-serif;
                 color: white;
+                font-size: 1.1em;
             }
             #reset{
                 color: orangered;
@@ -172,7 +178,7 @@ echo <<<_BODY
     </head>
     <body>
         <div id='wrapper'>
-        <h1>K Draw</h1>
+        <h1>K - Draw</h1>
         <canvas id='pad' width='600' height="400"></canvas>
 
         <div id='colorPallet' width='480' height='60'>
