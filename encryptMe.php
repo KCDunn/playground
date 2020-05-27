@@ -127,7 +127,7 @@ echo <<<_END
 
     <form id="encrpt" method="post" action="encryptMe.php">
     
-    <input id="textInput" type="textarea" cols="200" rows="550" wrap="soft" name="encryptMessage">
+    <input style="width: 97%; height: 100px;" id="textInput" type="textarea" cols="200" rows="550" wrap="soft" name="encryptMessage">
     <p>Enter a secret slide value</p>
     <p class="enterNum">(between -20 and +20)</p>
     <input type="number" name="shiftVal" min="-20" max="20">

@@ -52,8 +52,8 @@
 		position:absolute;
 		border:5px solid silver;
 		width: 255px;
-		top:320px;
-		left:1030px;
+		top:70px;
+		left:980px;
 		background-color:sandybrown;
 		padding:10px;
 		font-size:30px;
@@ -62,14 +62,17 @@
 	#score_info{
 		color: white;
 		position: absolute;
-		top: 70px;
-		left: 1030px;
+		top: 150px;
+		left: 980px;
 	}
 	#stopkeyOutput{
 		background-color: yellow;
 	}
 	#gameplay{
-		margin-left: 160px;
+		/* margin-left: 160px; */
+		position: absolute;
+		left: 990;
+		top: 470px;
 	}
 	table, th, td {
 	border: 1px solid black;
@@ -120,15 +123,16 @@
 		<div id="explode"></div></div>	
 	</div>
 	<div id="paused"><p>PAUSED</p></div>
-	<div id="gameplay" style="color: white;"><p>Use arrow keys to move, and spacebar to shoot.</p><p> Backspace to pause.</p><p> Enter to continue.</p></div>
+	
 	<div id="stopkeyOutput"></div>
-	<div id='score'></div>
+	<!-- <div id='score'></div> -->
 	<!-- <pre id="score_info">
 		<p>Hit Enemy:       + 10pts</p>
 		<p>Bullets:         - 2pt</p>
 		<p>Get hit:         - 50pts</p>
 		<p>Enemy gets away: - 10pts</p>
 	</pre> -->
+	<div id='score'></div>
 	<div id="score_info">
 		<table>
 			<tr>
@@ -140,11 +144,9 @@
 			<tr><td>Enemy gets away</td><td>-10pts</td><td id="gotAway"></td></tr>
 		</table>
 	</div>
+	<div id="gameplay" style="color: white;"><h2>Game Play:</h2><p>Use arrow keys to move</p><p>spacebar to shoot.</p><p> Backspace to pause.</p><p> Enter to continue.</p></div>
 	<a id="goback" href="../index.php">Back to Games</a>
-	<audio id="myAudio">
-	  <source src="horse.ogg" type="audio/ogg">
-	  <source src="horse.mp3" type="audio/mpeg">
-	</audio>
+	
 
 <script>
 	var score = hitEnemy = bulletUse = gotAway = gotHit = 0;
