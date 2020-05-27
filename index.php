@@ -77,11 +77,7 @@ echo <<<_END
             <p>Make some Art <br>or just scrible!</p>
             <a class="go_to link" href="k_draw.php">K Draw</a>
         </div>
-        <div class="game_item">
-            <h2>Guessing Game</h2>
-            <p>Guess a number between 1 and 100. How many guesses does it take you?</p>
-            <a class="go_to link" href="guessingGame.php">Guessing Game</a>
-        </div>
+        
         <div class="game_item">
             <h2>Encrypt Me</h2>
             <p>Encrypt or Decrypt messages sent between you and your conspiracy friends!</p>
