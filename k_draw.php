@@ -1,3 +1,5 @@
+<?php
+echo <<<_BODY
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,6 +9,9 @@
             *{
                 margin: 0px;
                 padding: 0px;
+            }
+            html, body, #wrapper{
+                height: 95%;
             }
             body{
                 background-color: rgb(51, 51, 51);
@@ -66,12 +71,13 @@
                 border-radius: 5px;
             }
             button{
-                border: 1px solid black;
+                border: 1px solid white;
                 border-radius: 8px;
                 text-align: justify;
+                transition: 0.2s;
             }
             button:hover{
-                border: 1px solid white;
+                border: 1px solid black;
             }
             button span{
                 display: inline-block;
@@ -128,6 +134,30 @@
                 color: orangered;
                 text-decoration: none;
             }
+            footer{
+                background-color: grey;
+                height: 10%;
+                padding-top: 30px;
+                text-align: center;
+            }
+            footer button{
+                padding: 5px;
+                background-color: orangered;
+                /* color: white; */
+                margin-bottom: 8px;
+                transition: 0.5s;
+            }
+            footer button:hover{
+                background-color: orange;
+                /* color: white; */
+            }
+            footer a{
+                text-decoration: none;
+                color: black;
+            }
+            footer a:hover{
+                color: rgb(2, 49, 88);
+            }
             
         </style>
         <script>
@@ -163,7 +193,7 @@
             <button id="medium" class='lineSize' onclick="lineSize(4)">Medium <span></span></button>
             <button id="large" class='lineSize' onclick="lineSize(8)">Large   <span></span></button>
         </div>
-        <a id='reset' href="k_draw.html">Reset</a>
+        <a id='reset' href="k_draw.php">Reset</a>
         <script>
             canvas = $('#pad')[0]
             context = canvas.getContext("2d")
@@ -211,10 +241,8 @@
             
         </script>
         </div>
-<php
+_BODY;
+
 require_once 'footer.php';
-
-    <!-- </body>
-</html> -->
-
+    
 ?>

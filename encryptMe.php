@@ -152,10 +152,9 @@ _END;
 echo <<<_END
     
     </div>
-    <a id="goback" href="index.php">Back to Playground</a>
 </div>
 
-</body>
-</html>
 _END;
+
+require_once 'footer.php';
 ?>

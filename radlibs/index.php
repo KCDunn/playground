@@ -134,12 +134,9 @@ echo <<<_BODY
 
     </div>
 </div>
-<a class="link" id="goback" href="../">Back to Playground</a>
 
-</body>
-</html>
 
 
 _BODY;
-
+require_once 'footer.php';
 ?>

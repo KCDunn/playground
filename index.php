@@ -68,9 +68,14 @@ echo <<<_END
             <a class="go_to link" href="radlibs/">Rad Libs</a>
         </div>
         <div class="game_item">
-            <h2>Tru Story</h2>
+            <h2>True Story</h2>
             <p>Read and write true stories based on selected topics</p>
-            <a class="go_to link" href="https://truestory.kevincdunn.com">Tru Story</a>
+            <a class="go_to link" href="https://truestory.kevincdunn.com">True Story</a>
+        </div>
+        <div class="game_item desktop">
+            <h2>K Draw</h2>
+            <p>Make some Art <br>or just scrible!</p>
+            <a class="go_to link" href="k_draw.php">K Draw</a>
         </div>
         <div class="game_item">
             <h2>Guessing Game</h2>

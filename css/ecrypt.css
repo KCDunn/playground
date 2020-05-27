@@ -26,6 +26,7 @@ form{
     background-blend-mode: exclusion;
     background-image: url(../img/Steel1.jpeg);
     background-size: cover;
+    
 }
     form input[type="textarea"]{
         width: 595px;
@@ -45,6 +46,7 @@ form{
         /* display: inline-block; */
         margin: auto;
         border-radius: 10px;
+        transition: .2s;
     }
     form input[type="submit"]:hover{
         background-color: rgb(255, 255, 215);
@@ -95,6 +97,7 @@ input{
     box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.678);
     vertical-align: middle;
     color: rgb(95, 95, 95);
+    transition: .2s;
 }
 #switchCrypt a:hover{
     color: rgb(63, 63, 63);
@@ -168,15 +171,55 @@ input{
     #switchCrypt{
         padding-top: 10px;
     }
+
+}
+
+
 }
 @media only screen and (min-width: 501px) {
+    html{
+        width: 100%;
+    }
 
     .main{
         background-color: rgba(0, 0, 0, 0);
-        width: 600px;
+        /* width: 600px; */
         /* height: 480px; */
         padding: 20px;
         margin: auto;
         border-radius: 10px;
     }
+}
+
+@media only screen and (min-width: 1200px) {
+    html, body, .main{
+        height: 95%;
+    }
+}
+
+footer{
+    /* background-color: grey; */
+    background-color: rgb(115, 148, 158);
+    width: 100%;
+    height: 10%;
+    padding-top: 30px;
+    text-align: center;
+}
+footer button{
+    padding: 5px;
+    background-color: orangered;
+    /* color: white; */
+    margin-bottom: 8px;
+    transition: 0.5s;
+}
+footer button:hover{
+    background-color: orange;
+    /* color: white; */
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+footer a:hover{
+    color: rgb(2, 49, 88);
 }
