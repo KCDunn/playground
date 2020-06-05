@@ -49,7 +49,7 @@ h1{
     background-size: cover;
 }
 .other{
-    background-image: url(../img/circuit-board.webp);
+    background-image: url(../img/ship.jpg);
     background-size: cover;
 }
 ul{
@@ -96,6 +96,44 @@ a{
     background-color: lightblue;
 }
 
+#appInfo{
+    background: rgba(66, 66, 66, 0.925);
+    width: 100%;
+    color: rgb(221, 221, 221) !important;
+    padding: 20px 8px 10px 8px;
+    margin: auto;
+}
+#userNoteP, #authorNoteP{
+    border: 1px dotted white; 
+    border-radius: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: justify;
+    margin: auto;
+}
+#userNoteP p, #authorNoteP p{
+    width: 95%;
+    margin: auto;
+}
+#appInfo h3{
+   margin-top: 4px;
+   margin-bottom: 8px;
+   text-align: center;
+}
+#appInfo h4{
+    color: rgb(179, 204, 211);
+    margin-top: 8px;
+    margin-bottom: 40px;
+}
+#appInfo img{
+    width: 300px; 
+    border: 1px solid white; 
+    display: block; 
+    margin: auto;
+    margin-top: 5px;
+}
+
+
 @media only screen and (max-width: 500px) {
     body{
         margin: 0px;
@@ -126,6 +164,23 @@ a{
         margin: auto;
         margin-bottom: 15px;
     }
+    #appInfo{
+        width: 100%;
+        padding: 20px 0px 10px 0px;
+        margin: auto;
+    }
+    #userNoteP, #authorNoteP{
+        width: 98%;
+    }
+    #appInfo p{
+        width: 95%;
+        margin: auto;
+    }
+    
+    #appInfo img{
+        width: 95%; 
+        text-align: justify;
+    }
 }
 
 @media only screen and (min-width: 501px) {
@@ -143,6 +198,39 @@ a{
         margin: 20px;
 
     }
+    #appInfo{
+        width: 100%;
+        padding: 20px 8px 10px 8px;
+        margin: auto;
+    }
+    #userNoteP, #authorNoteP{
+        width: 99%;
+        max-width: 550px; 
+        border-radius: 8px;
+        padding: 8px;
+        margin: auto;
+    }
+    #appInfo p{
+        width: 300px;
+        margin: auto;
+        text-align: justify;
+    }
+    #appInfo h3{
+       margin-top: 4px;
+       margin-bottom: 8px;
+    }
+    #appInfo h4{
+        color: rgb(179, 204, 211);
+        margin-top: 8px;
+        margin-bottom: 40px;
+    }
+    #appInfo img{
+        width: 300px; 
+        border: 1px solid white; 
+        display: block; 
+        margin: auto;
+    }
+
 }
 
 @media only screen and (min-width: 715px) {

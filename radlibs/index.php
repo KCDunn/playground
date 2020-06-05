@@ -49,6 +49,12 @@ echo <<<_HEAD
                 $('.3').delay(1200).animate({opacity: '1.0'});
                 $('.4').delay(1600).animate({opacity: '1.0'});
                 
+                $( "#showUsernote" ).click(function() {
+                    $( "#userNoteP" ).slideToggle('slow');
+                });
+                $( "#showAuthornote" ).click(function() {
+                    $( "#authorNoteP" ).slideToggle('slow');
+                });
             });
 
             
@@ -119,7 +125,30 @@ echo <<<_BODY
 
     </div>
 </div>
+<div id='appInfo'>
+            <h3 id='userNote'>Using Rad Libs</h3>
+            <div id='userNoteP'>
+                <p>Rad Libs, based on Mad Libs, is a fun app for friends and family.  
+                You can think up creative words that will be needed in order to replace words in a variety of popular works.  
+                The words replaced are not known until after the topics form is submitted.  Then the paragraph or statement 
+                will be revealed to the players, and now the laughs can begin!  There are a list of Rad Lib game items found in each theme. 
+                Click on an item of interest and you will be taken to the form, where you or other players can start thinking up words for that game.   </p>
+            </div>
+            <h4 id='showUsernote'>Show/Hide</h4>
 
+            <h3 id='authorNote'>Authors Note</h3>
+            <div id='authorNoteP'>
+                <p>What I enjoyed about creating this game was not just how to code this, 
+                but in thinking of how I want the player to see the game.  I don’t want the player to be able to see where in the content words are being replaced.  
+                I want that to be revealed after the words are chosen and the form is submitted.  So hiding and showing elements of the game page was a must. </p>
+            </div>
+            <h4 id='showAuthornote'>Show/Hide</h4>
+
+        </div>
+        <script>
+        document.getElementById('userNoteP').style.display = 'none';
+        document.getElementById('authorNoteP').style.display = 'none';
+        </script>
 
 
 _BODY;

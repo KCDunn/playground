@@ -27,14 +27,13 @@ if(isset($_POST['noun1']) && isset($_POST['verb1']) && isset($_POST['adjective']
 	
 	if ($fail == "")
 	{
-        $output = "<h2>Led Zepplin - $noun1 and $verb1</h2><br><h3>Song edited by $writer</h3><br>
-        It's been a long $noun2 since I $noun1 and " . $verb1 . "ed<br>
-        It's been a long $noun2 since I did the $verb2<br>
-        Oh let me get it back let me get it back<br>
-        Let me get it back baby where I come from<br>
-        It's been a long $noun2 been a long $noun2<br>
-		Been a long $adjective $adjective $adjective $adjective $adjective $noun2.<br>
-		<br>
+        $output = "<h2>Led Zepplin - $noun and $verb1</h2><br><h3>Song edited by $writer</h3><br>
+        It's been a long $noun2 since I $noun and" . $verb1 . "ed
+        It's been a long $noun2 since I did the $verb2
+        Oh let me get it back let me get it back
+        Let me get it back baby where I come from
+        It's been a long $noun2 been a long $noun2
+        Been a long $adjective $adjective $adjective $adjective $adjective $noun2.
         Yes it has
         <br><br><br>";
 
