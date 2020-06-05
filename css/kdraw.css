@@ -1,0 +1,227 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-color: rgb(51, 51, 51);
+    
+}
+#sig-canvas {
+    /* border: 2px dotted #CCCCCC; */
+    border-radius: 5px;
+    cursor: crosshair;
+}
+
+#sig-dataUrl {
+    width: 100%;
+}
+#wrapper{
+    height: 87%;
+    /* background-color: rgb(223, 82, 0); */
+    margin: auto;
+    border-radius: 8px;
+}
+h1{
+    font-family: 'Rock Salt', cursive;
+    display: block;
+    background-color: rgb(99, 99, 99);
+    margin-bottom: 5px;
+    padding: 2px;
+    border-radius: 5px;
+    color: white;
+    border-bottom: 2px solid purple;
+    
+}
+.pad {
+    width: 100%;
+    height: 400px;
+    background: #def;
+    border: 1px solid #aaa;
+    display: inline-block;
+    border-radius: 8px;
+    margin: auto;
+}
+#colorPallet{
+    width: 99%;
+    margin: 5px !important;
+    margin: auto;
+    display: block;
+    background-color: rgb(99, 99, 99);
+}
+#sizePallet{
+    display: block;
+}
+.lineColor, #colorPallet{
+    display: inline-block !important;
+    margin: 2px !important;
+}
+.lineColor, .lineSize{
+    padding: 8px;
+    margin: 5px;
+}
+#sizePallet{
+    background-color: rgb(99, 99, 99);
+}
+#sizePallet h3{
+    display: inline-block;
+}
+#sizePallet, #colorPallet{
+    border-radius: 5px;
+}
+button{
+    border: 1px solid white;
+    border-radius: 8px;
+    text-align: justify;
+    transition: 0.2s;
+}
+button:hover{
+    border: 1px solid black;
+}
+button span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+#black span{
+    background: black;
+    color: white;
+}
+#blue span{
+    background: blue;
+}
+#green span{
+    background: green;
+}
+#red span{
+    background: red;
+}
+#yellow span{
+    background: yellow;
+}
+#orange span{
+    background: orange;
+}
+#purple span{
+    background: purple;
+}
+.lineSize span{
+    border-radius: 50px;
+    background-color: black;
+    position: relative;
+    left: 8px;
+}
+
+#small span {
+    width: 2px;
+    height: 2px;
+}
+#medium span{
+    width: 4px;
+    height: 4px;
+}
+#large span{
+    width: 8px;
+    height: 8px;
+}
+h3{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 1.1em;
+}
+#reset{
+    color: orangered;
+    text-decoration: none;
+}
+footer{
+    background-color: grey;
+    border-top: 2px solid purple;
+    height: 10%;
+    padding-top: 30px;
+    text-align: center;
+}
+footer button{
+    padding: 5px;
+    background-color: orangered;
+    /* color: white; */
+    margin-bottom: 8px;
+    transition: 0.5s;
+}
+footer button:hover{
+    background-color: orange;
+    /* color: white; */
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+footer a:hover{
+    color: rgb(2, 49, 88);
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    h1{
+        text-align: center;
+        border-bottom: 2px solid purple;
+        padding: 0px;
+        font-size: 1.2em;
+    
+    }
+    .lineColor span{
+        display: none;
+    }
+    #colorPicker{
+        width: 315px;
+        margin: auto;
+    }
+    #colorPallet, #sizePallet{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    #colorPallet h3{
+        width: 100%;
+        text-align: center;
+    }
+    #sizePallet{
+        padding-left: 20px;
+    }
+    .lineColor{
+        width: 70px;
+        margin: auto;
+        text-align: center;
+    }
+    #black{
+        background: black;
+        color: white
+    }
+    #blue{
+        background: blue;
+        color: white;
+    }
+    #red{
+        background: red;
+    }
+    #green{
+        background: green;
+    }
+    #orange{
+        background: orange;
+    }
+    #yellow{
+        background: yellow;
+    }
+    #purple{
+        background: purple;
+        color: white;
+    }
+    #white{
+        background: white;
+        border: black;
+}
+
+}

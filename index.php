@@ -69,7 +69,7 @@ echo <<<_END
             <p>Read and write true stories based on selected topics</p>
             <a class="go_to link" href="https://truestory.kevincdunn.com">True Story</a>
         </div>
-        <div class="game_item desktop">
+        <div class="game_item">
             <h2>K Draw</h2>
             <p>Make some Art <br>or just scrible!</p>
             <a class="go_to link" href="k_draw.php">K Draw</a>
@@ -99,6 +99,9 @@ _END;
 echo <<<_END
     </div>
     </div>
+    <footer>
+        Web App created by <a href='http://www.kevincdunn.com' target='_blank'>kevincdunn.com</a>
+    </footer>
 </body>
 </html>
 _END;

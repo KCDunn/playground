@@ -114,13 +114,22 @@ hr{
 button{
     margin: auto;
 }
-/* .game_item button{
-    background-color: rgba(221, 14, 14, 0.945);
-} */
-    /* .game_item h2{
-        text-align: center;
-        margin: 10px;
-    } */
+
+
+
+footer{
+    color: white;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    margin-top: 40px;
+}
+footer a{
+    color: lightblue;
+}
+footer a:hover{
+    color: wheat;
+}
 
 
     @media only screen and (max-width: 500px) {
@@ -292,8 +301,10 @@ button{
         
     }
 
-    @media only screen and (min-height: 900px) {
+    @media only screen and (min-height: 1000px) {
         html, body, #wrapper{
             /* height: 100%; */
         }
+        
     }
+    

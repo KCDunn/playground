@@ -120,14 +120,12 @@ hr{
 button{
     margin: auto;
 }
-/* .game_item button{
-    background-color: rgba(221, 14, 14, 0.945);
-} */
-    /* .game_item h2{
-        text-align: center;
-        margin: 10px;
-    } */
-
+footer{
+    width: 100%;
+    background-color: orangered !important;
+    text-align: center;
+    color: white;
+}
 
     @media only screen and (max-width: 500px) {
         body{
