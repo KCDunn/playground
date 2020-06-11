@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#purple{
+    background-color: purple;
+    color: white;
+}
+#purple:hover{
+    background-color: rgb(88, 0, 88);
+}
+#orange{
+    background-color: orange;
+}
+#orange:hover{
+    background-color: rgb(224, 147, 2);
+}
+#white{
+    background-color: white;
+}
+#white:hover{
+    background-color: rgb(216, 216, 216);
+}
