@@ -60,7 +60,7 @@ echo <<<_END
             document.getElementById('footer').style.opacity = '0';
         </script>
         
-        <div class='card'>
+        <div class='card bg-light'>
             <div class="game_item card-body text-center">
                 <h2 class='card-title'>Rad Libs</h2>
                 <p class='card-text'>Like Mad Libs, but radder! Ok well, its Mad Libs.</p>
@@ -68,7 +68,7 @@ echo <<<_END
             </div>
         </div>
 
-        <div class='card'>
+        <div class='card bg-light'>
             <div class="game_item card-body text-center">
                 <h2 class='card-title'>True Story</h2>
                 <p class='card-text'>Read and write true stories based on selected topics</p>
@@ -76,7 +76,7 @@ echo <<<_END
             </div>
         </div>
 
-        <div class='card'>
+        <div class='card bg-light'>
             <div class="game_item card-body text-center">
                 <h2 class='card-title'>K Draw</h2>
                 <p class='card-text'>Make some Art <br>or just scrible!</p>
@@ -84,7 +84,7 @@ echo <<<_END
             </div>
         </div>
 
-        <div class='card'>
+        <div class='card bg-light'>
             <div class="game_item card-body text-center">
                 <h2 class='card-title'>Encrypt Me</h2>
                 <p class='card-text'>Encrypt or Decrypt messages sent between you and your conspiracy friends!</p>
@@ -93,7 +93,7 @@ echo <<<_END
             </div>
         </div>
 
-        <div class='card'>
+        <div class='card bg-light'>
             <div class="game_item card-body text-center desktop">
                 <h2 class='card-title'>Pacman</h2>
                 <p class='card-text'>A packman where everyone wins! (for desktop/laptop)</p>
@@ -101,7 +101,7 @@ echo <<<_END
             </div>
         </div>
 
-        <div class='card'>
+        <div class='card bg-light'>
             <div class="game_item card-body text-center desktop">
                 <h2 class='card-title'>1942</h2>
                 <p class='card-text'>Shoot down the enemy planes! (for desktop/laptop)</p>

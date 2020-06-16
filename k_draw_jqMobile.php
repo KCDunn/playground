@@ -7,60 +7,71 @@ echo <<<_BODY
         <meta http-equiv='X-UA-Compatible" content='IE+edge'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>K Draw</title>
-        <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
-        
-        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+        <link rel='stylesheet' href='jquery-mobile/jquery.mobile-1.4.5.min.css'>
+        <script src="js/jquery-3.5.0.min.js"></script>
+        <script> src='jquery-mobile/jquery.mobile-1.4.5.min.js'</script>
         
         <link rel="stylesheet" href="css/kdrawNew.css">
         
-        
+        <script>
+            var _hmt = _hmt || []; (function() {
+                var hm = document.createElement('script');
+                hm.src = '//hm.baidu.com/hm.js?73c27e26f610eb3c9f3feb0c75b03925';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
     </head>
-    <body>
-    <h1>K-Draw</h1>
-    
+<body>
+
+
+<div data-role='page' id='pageone'>
+    <div data-role='header'>
+        <h1>K-Draw</h1>
     </div>
-    <div id='colorPallet' class='container-fluid bg-secondary' style='padding-bottom: 3px;'>
+    <div data-role='main' class='ui-content'>
+        <div id='colorPallet' class='' style='padding-bottom: 3px;'>
             <h3>Color Pallet</h3>
             <div id='colorPicker'>
-                <button id="black" class='lineColor btn btn-dark' onclick="lineColor('black')" roll='button'><span></span> Black</button>
-                <button id="red" class='lineColor btn btn-danger' onclick="lineColor('red')" role='button'><span></span> Red</button>
-                <button id="orange" class='lineColor btn btn-default' onclick="lineColor('orange')" role='button'><span></span> Orange</button>
-                <button id="yellow" class='lineColor btn btn-warning' onclick="lineColor('yellow')" role='button'><span></span> Yellow</button>
-                <button id="green" class='lineColor btn btn-success' onclick="lineColor('green')" role='button'><span></span> Green</button>
-                <button id="blue" class='lineColor btn btn-primary' onclick="lineColor('blue')" role='button'><span></span> Blue</button>
-                <button id="purple" class='lineColor btn btn-default' onclick="lineColor('purple')" role='button'><span></span> Purple </button>
-                <button id="white" class='lineColor btn btn-default' onclick="lineColor('white')" role='button'><span></span> white </button>
+                <button id="black" class='lineColor' onclick="lineColor('black')" roll='button'><span></span> Black</button>
+                <button id="red" class='lineColor' onclick="lineColor('red')" role='button'><span></span> Red</button>
+                <button id="orange" class='lineColor' onclick="lineColor('orange')" role='button'><span></span> Orange</button>
+                <button id="yellow" class='lineColor' onclick="lineColor('yellow')" role='button'><span></span> Yellow</button>
+                <button id="green" class='lineColor' onclick="lineColor('green')" role='button'><span></span> Green</button>
+                <button id="blue" class='lineColor' onclick="lineColor('blue')" role='button'><span></span> Blue</button>
+                <button id="purple" class='lineColor' onclick="lineColor('purple')" role='button'><span></span> Purple </button>
+                <button id="white" class='lineColor' onclick="lineColor('white')" role='button'><span></span> white </button>
             </div>
         </div>
-    <div class="row">
-        <div id="canvasDiv" class="col-md-12">
-             
+        <div>
+            <div id="canvasDiv">
+                
+            </div>
+            
         </div>
-        
-    </div>
     
     
         
-        <div id='sizePallet' class='container-fluid bg-secondary' style='padding-bottom: 3px;'>
+        <div id='sizePallet' class='' style='padding-bottom: 3px;'>
             <h3>Line Size</h3>
-            <button id="small" class='lineSize btn btn-light rem1' onclick="lineSize(2)">Small   <span></span></button>
-            <button id="medium" class='lineSize btn btn-light' onclick="lineSize(4)">Medium <span></span></button>
-            <button id="large" class='lineSize btn btn-light' onclick="lineSize(8)">Large   <span></span></button>
+            <button id="small" class='lineSize' onclick="lineSize(2)">Small   <span></span></button>
+            <button id="medium" class='lineSize' onclick="lineSize(4)">Medium <span></span></button>
+            <button id="large" class='lineSize' onclick="lineSize(8)">Large   <span></span></button>
         </div>
     
-    <br/>
-    
+        <br/>
+    </div>
+    <a id='reset' href="k_draw.php">Reset</a>
 </div>
 
-        <a id='reset' class='btn-sm btn-warning' href="k_draw.php">Reset</a>
+        
         
 
         
 
 
         <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
         
         <script>
             var canWidth = "";
