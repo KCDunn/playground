@@ -18,9 +18,11 @@ echo <<<_END
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
 
+    <link rel='stylesheet' href='jquery-mobile/jquery.mobile-1.4.5.min.css'>
     <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/gamelist.css">
     <script src="js/jquery-3.5.0.min.js"></script>
+    <script> src='jquery-mobile/jquery.mobile-1.4.5.min.js'</script>
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
@@ -48,10 +50,10 @@ echo <<<_END
 </head>
 <body>
 
-<div id="wrapper" class="container">
+<div data-role='page' id="wrapper" class="container">
 <h1 id="title"><a href="../kevincdunn"><span>KCD's</span></a> PLAYGROUND!</h1>
 
-    <div id="main" class='card-columns'>
+    <div data-role='content' id="main" class='card-columns'>
 
         <script>
             
@@ -117,7 +119,7 @@ _END;
 echo <<<_END
     </div>
     </div>
-    <footer class='jumbotron text-center bg-light' id='footer'>
+    <footer id='footer' class='jumbotron text-center bg-light'>
         Web App created by <a href='http://www.kevincdunn.com' target='_blank'>kevincdunn.com</a>
     </footer>
     <script>
