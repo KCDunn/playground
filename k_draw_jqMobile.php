@@ -30,7 +30,7 @@ echo <<<_BODY
     <div data-role='header'>
         <h1>K-Draw</h1>
     </div>
-    <div data-role='main' class='ui-content'>
+    <div data-role='content' class='ui-content'>
         <div id='colorPallet' class='' style='padding-bottom: 3px;'>
             <h3>Color Pallet</h3>
             <div id='colorPicker'>
