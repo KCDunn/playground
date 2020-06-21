@@ -69,19 +69,14 @@ echo <<<_HEAD
 	<meta name="keywords" content="mad libs">
 	<meta name="author" content="Kevin Dunn">
 	<meta name="copyright" content="2018">
-    
-    
-	<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
-	<!-- <link href="https://fonts.googleapis.com/css?family=Nobile&display=swap" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Capriola&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
 
+	<link rel='stylesheet' href='jquery-mobile/jquery.mobile-1.4.5.min.css'>
+    <script src='js/jquery-2.2.4.min.js'></script>
+    <script src='jquery-mobile/jquery.mobile-1.4.5.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/radlibs_select_new.css">
 
-	<link rel="stylesheet" type="text/css" href="css/radlibs.css">
-	<script src="js/radlibs.js"></script>
-	<script src="../js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
@@ -124,24 +119,25 @@ _HEAD;
 
 echo <<<_BODY
 <body>
-<div id="wrapper">
-
-<div class="main">
-<h1>Rockin Libs</h1>
+<div data-role="page" id="wrapper">
+    <div data-role="header">
+        <h1>Literary RadLibs</h1>
+    </div>
+<div data-role="content" class="main">
 
 <form style="display:$formHide;" method="post" action="rock_led_zepplin.php" onSubmit="return validate(this)">
-	<label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun1</p>
-	<input type="text" name="noun1" value="$noun1">
-	<label class="tooltip">Type a Verb:<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb1</p>
-	<input type="text" name="verb1" value="$verb1">
-	<label class="tooltip">Type an Adjective:<span class="tooltiptext">Used to modify a noun. ('hot' potato, 'cold' ice, 'green' eggs) <a class="tipRef" style="color: lightblue;" href="https://coolestwords.com/cool-adjectives/" target="blank">Cool Adjectives</a></span></label><p class="err">$fail_adj</p>
-	<input type="text" name="adjective" value="$adjective">
-	<label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun2</p>
-    <input type="text" name="noun2" value="$noun2">
-    <label class="tooltip">Type a Verb:<span class="tooltiptext">Action, state, or relation between two things.(set, have, make) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2018/02/10/list-of-1000-present-tense-verbs/" target="blank">Ponderous Verbs</a></span></label><p class="err">$fail_verb2</p>
-	<input type="text" name="verb2" value="$verb2">
-	<label class="tooltip">Type your Name:<span class="tooltiptext">Or the name of someone you know.</span></label><p class="err">$fail_writer</p>
-	<input type="text" name="writer" value="$writer">
+	<label class="ui-hidden-accessible">Type a Noun:</label><p class="err">$fail_noun1</p>
+	<input type="text" name="noun1" value="$noun1" placeholder="noun">
+	<label class="ui-hidden-accessible">Type a Verb:</label><p class="err">$fail_verb1</p>
+	<input type="text" name="verb1" value="$verb1" placeholder="verb">
+	<label class="ui-hidden-accessible">Type an Adjective:</label><p class="err">$fail_adj</p>
+	<input type="text" name="adjective" value="$adjective" placeholder="adjective">
+	<label class="ui-hidden-accessible">Type a Noun:</label><p class="err">$fail_noun2</p>
+    <input type="text" name="noun2" value="$noun2" placeholder="noun">
+    <label class="ui-hidden-accessible">Type a Verb:</label><p class="err">$fail_verb2</p>
+	<input type="text" name="verb2" value="$verb2" placeholder="noun">
+	<label class="ui-hidden-accessible">Type your Name:</label><p class="err">$fail_writer</p>
+	<input type="text" name="writer" value="$writer" placeholder="your name">
 	<br>
 
 	<div id="error" style="display:$errorHide;">Sorry, the following errors were found!<br>
@@ -154,8 +150,8 @@ echo <<<_BODY
 
 <div id="output" style="display:$outputHide;">
     $output
-    <a href="index.php"><button id="newGame">Another Lib</button></a>
-    <a href="../"><button id="goBack">More Games</button></a>
+    <a href="index.php" data-role="button" data-ajax="false">Another Lib</a>
+    <a href="../" data-role="button" data-ajax="false">More Games</a>
 </div>
 
 </div>

@@ -31,11 +31,14 @@ echo <<<_HEAD
     
     
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
-    
-	<link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Roboto&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="css/radlibs_select.css">
-	<script src="../js/jquery-3.5.0.min.js"></script>
+    <link rel='stylesheet' href='jquery-mobile/jquery.mobile-1.4.5.min.css'>
+    <script src='js/jquery-2.2.4.min.js'></script>
+    <script src='jquery-mobile/jquery.mobile-1.4.5.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/radlibs_select_new.css">
+    
+
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
@@ -67,53 +70,54 @@ _HEAD;
 
 echo <<<_BODY
 <body>
-<h1>Rad Libs</h1>
-<div id="wrapper">
-    
-    <div id="main">
-    
 
-        <div class="game_theme lit">
-        
+<div id="wrapper" data-role="page">
+
+    <div data-role="header">
+        <h1>Rad Libs</h1>
+    </div>
+
+    <div class="ui-grid-a ui-responsive main">
+        <div class="ui-block-a"><div class="game_theme lit" data-role="content">
             <h2>Literary Libs</h2>
             <p>These Rad Libs are based on excerpts from popular literature.</p>
-            <ul>
-                <a class="link 1" href="lit_harry_potter.php"><li>Harry Potter</li></a>
-                <a class="link 2" href="lit_lotr.php"><li>Lord of the Rings</li></a>
-                <a class="link 3" href="lit_moby_dick.php"><li>Moby Dick</li></a>
-                <a class="link 4" href="lit_dracula.php"><li>Dracula</li></a>
+            <ul data-role="listview" data-inset="true">
+                <a class="link 1" href="lit_harry_potter.php" data-transition="pop" data-role='button'><li>Harry Potter</li></a>
+                <a class="link 2" href="lit_lotr.php" data-transition="pop" data-role='button'><li>Lord of the Rings</li></a>
+                <a class="link 3" href="lit_moby_dick.php" data-transition="pop" data-role='button'><li>Moby Dick</li></a>
+                <a class="link 4" href="lit_dracula.php" data-transition="pop" data-role='button'><li>Dracula</li></a>
             </ul>
-        </div>
-        <div class="game_theme rock">
+        </div></div>
+
+        <div class="ui-block-b"><div class="game_theme rock" data-role="content">
             <h2>Rock Libs</h2>
             <p>Check out these new lyrics to your favorite Hits, from yesterday and today!</p>
-            <ul>
-                <a class="link 1" href="rock_led_zepplin.php"><li>Led Zepplin</li></a>
-                <a class="link 2" href="rock_aerosmith.php"><li>Aerosmith</li></a>
-                <a class="link 3" href="rock_commodores.php"><li>Commodores</li></a>
-                
+            <ul data-role="listview" data-inset="true">
+                <a class="link 1" href="rock_led_zepplin.php" data-transition="pop" data-role='button'><li>Led Zepplin</li></a>
+                <a class="link 2" href="rock_aerosmith.php" data-transition="pop" data-role='button'><li>Aerosmith</li></a>
+                <a class="link 3" href="rock_commodores.php" data-transition="pop" data-role='button'><li>Commodores</li></a>
             </ul>
-            
-        </div>
-        <div class="game_theme inform">
+        </div></div>
+        
+
+        <div class="ui-block-a"><div class="game_theme inform" data-role="content">
             <h2>Informative Libs</h2>
             <p>Keep yourself informed on these most important topics!</p>
-            <ul>
-                <a class="link 1" href="inform_weather_alert.php"><li>Severe Weather Alert</li></a>
-                <a class="link 2" href="inform_poolrules.php"><li>Pool Rules</li></a>
-                
+            <ul data-role="listview" data-inset="true">
+                <a class="link 1" href="inform_weather_alert.php" data-transition="pop" data-role='button'><li>Severe Weather Alert</li></a>
+                <a class="link 2" href="inform_poolrules.php" data-transition="pop" data-role='button'><li>Pool Rules</li></a>
             </ul>
-        </div>
-        <div class="game_theme other">
+        </div></div>
+        <div class="ui-block-b"><div class="game_theme other" data-role="content">
             <h2>Pirate Libs</h2>
             <p>All things pirates like!</p>
-            <ul>
-                <a class="link 1" href="pirate_life.php"><li>Pirates Life</li></a>
-                <a class="link 2" href="pirate_bottles.php"><li>Bottles</li></a>
-                <a class="link 3" href="pirate_around_the_world.php"><li>Around the World</li></a>
+            <ul data-role="listview" data-inset="true">
+                <a class="link 1" href="pirate_life.php" data-transition="pop" data-role='button'><li>Pirates Life</li></a>
+                <a class="link 2" href="pirate_bottles.php" data-transition="pop" data-role='button'><li>Bottles</li></a>
+                <a class="link 3" href="pirate_around_the_world.php" data-transition="pop" data-role='button'><li>Around the World</li></a>
             </ul>
-        </div>
-
+        </div></div>
+    
         <script>
         $('.game_theme').css('opacity', '0.0');
         $('ul').css('display', 'none');
@@ -124,8 +128,8 @@ echo <<<_BODY
         </script>
 
     </div>
-</div>
-<div id='appInfo'>
+
+    <div id='appInfo' data-role="content">
             <h3 id='userNote'>Using Rad Libs</h3>
             <div id='userNoteP'>
                 <p>Rad Libs, based on Mad Libs, is a fun app for friends and family.  
@@ -143,12 +147,13 @@ echo <<<_BODY
                 I want that to be revealed after the words are chosen and the form is submitted.  So hiding and showing elements of the game page was a must. </p>
             </div>
             <h4 id='showAuthornote'>Show/Hide</h4>
-
         </div>
+
         <script>
         document.getElementById('userNoteP').style.display = 'none';
         document.getElementById('authorNoteP').style.display = 'none';
         </script>
+
 
 
 _BODY;

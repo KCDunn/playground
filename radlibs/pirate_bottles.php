@@ -69,18 +69,14 @@ echo <<<_HEAD
 	<meta name="author" content="Kevin Dunn">
 	<meta name="copyright" content="2018">
     
-    
-	<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
-	<!-- <link href="https://fonts.googleapis.com/css?family=Nobile&display=swap" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Capriola&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Spectral+SC&display=swap" rel="stylesheet">
 
+	<link rel='stylesheet' href='jquery-mobile/jquery.mobile-1.4.5.min.css'>
+    <script src='js/jquery-2.2.4.min.js'></script>
+    <script src='jquery-mobile/jquery.mobile-1.4.5.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/radlibs_select_new.css">
 
-	<link rel="stylesheet" type="text/css" href="css/radlibs.css">
-	<script src="js/radlibs.js"></script>
-	<script src="../js/jquery-3.5.0.min.js"></script>
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
@@ -120,18 +116,20 @@ _HEAD;
 
 echo <<<_BODY
 <body>
-<div id="wrapper">
-
-<div class="main">
-<h1>Pirate Libs</h1>
+<div data-role="page" id="wrapper">
+    <div data-role="header">
+        <h1>Literary RadLibs</h1>
+    </div>
+<div data-role="content" class="main">
 
 <form style="display:$formHide;" method="post" action="pirate_bottles.php" onSubmit="return validate(this)">
-	<label class="tooltip">Type a Noun:<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun1</p>
-	<input type="text" name="noun1" value="$noun1">
-	<label class="tooltip">Type a Noun (plural):<span class="tooltiptext">Person, place, or thing.(dog, park, water) <a class="tipRef" style="color: lightblue;" href="https://studentsandwriters.com/2019/11/11/new-worlds-funniest-mad-libs-noun-list/" target="blank"> Nouns</a></span></label><p class="err">$fail_noun2</p>
-    <input type="text" name="noun2" value="$noun2">
-	<label class="tooltip">Number between 1 - 99:</label><p class="err">$fail_songNum</p>
-	<input type="number" style="width: 50px; padding: 5px; text-align: center; font-size: 1.2em;" name="songNum" value="$songNum" min="1" max="99">
+	<label class="ui-hidden-accessible">Type a Noun:</label><p class="err">$fail_noun1</p>
+	<input type="text" name="noun1" value="$noun1" placeholder="noun">
+	<label class="ui-hidden-accessible">Type a Noun (plural):</label><p class="err">$fail_noun2</p>
+    <input type="text" name="noun2" value="$noun2" placeholder="noun (plural)">
+    <label>Number between 1 and 99</label>
+	<label class="ui-hidden-accessible">Choose between 1 - 99:</label><p class="err">$fail_songNum</p>
+	<input type="range" name="songNum" value="$songNum" min="1" max="99">
 	<br>
 
 	<div id="error" style="display:$errorHide;">Sorry, the following errors were found!<br>
@@ -146,8 +144,8 @@ echo <<<_BODY
     <h2>$outputTitle</h2>
     <br>
     <p>$output</p>
-    <a href="index.php"><button id="newGame">Another Lib</button></a>
-    <a href="../"><button id="goBack">More Games</button></a>
+    <a href="index.php" data-role="button" data-ajax="false">Another Lib</a>
+    <a href="../" data-role="button" data-ajax="false">More Games</a>
 </div>
 
 </div>
