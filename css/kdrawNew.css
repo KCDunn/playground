@@ -2,23 +2,107 @@
     padding: 0;
     margin: 0;
 }
+#page {
+    background: rgb(209, 209, 209);
+}
+#header{
+    box-shadow: 3px 1px 4px 1px rgb(233, 151, 233);
+    /* border-bottom: 2px solid rgb(233, 151, 233) !important; */
+    margin-bottom: 4px;
+}
+h1{
+    font-family: 'Rock Salt', cursive;;
+}
+#footer{
+    text-align: center;
+    /* border-top: 2px solid rgba(233, 151, 233, 0.616);0 */
+}
+#goBack{
+    transition: 0.3s;
+    /* box-shadow: 1px 1px 2px 1px rgba(233, 151, 233, 0.705) !important; */
+    /* border-color: rgb(233, 151, 233); */
+    text-shadow: none;
+}
+#goBack:hover{
+    background: rgba(128, 128, 128, 0.295);
+}
 
+
+h3, #colorPicker, #sizePallet{
+    display: inline-block;
+}
+#colorPicker, #sizePallet{
+    /* border: 1px solid grey; */
+    text-shadow: none !important;
+}
+#canvasDiv{
+    border: 1px solid rgb(175, 175, 175);
+}
+.lineColor{
+    transition: 0.4s;
+    text-shadow: none !important;
+}
+#black{
+    background-color: rgba(0, 0, 0, 0.35);
+}
+#black:hover{
+    background-color: rgba(0, 0, 0, 0.55);
+    /* border-color: black; */
+}
 #purple{
-    background-color: purple;
-    color: white;
+    background-color: rgba(128, 0, 128, 0.35);
+    /* color: white; */
 }
 #purple:hover{
-    background-color: rgb(88, 0, 88);
+    background-color: rgba(128, 0, 128, 0.55);
+    /* border-color: purple; */
 }
 #orange{
-    background-color: orange;
+    background-color: rgba(255, 166, 0, 0.35);
 }
 #orange:hover{
-    background-color: rgb(224, 147, 2);
+    background-color: rgba(255, 166, 0, 0.55);
+    /* border-color: orange; */
 }
 #white{
     background-color: white;
 }
 #white:hover{
     background-color: rgb(216, 216, 216);
+    /* border-color: black; */
+}
+#yellow{
+    background-color: rgba(255, 255, 0, 0.35);
+}
+#yellow:hover{
+    background-color: rgba(255, 255, 0, 0.55);
+    /* border-color: rgb(255, 230, 0); */
+}
+#green{
+    background-color: rgba(0, 128, 0, 0.35);
+}
+#green:hover{
+    background-color: rgba(0, 128, 0, 0.55);
+    /* border-color: green; */
+}
+#blue{
+    background-color: rgba(0, 0, 255, 0.35);
+}
+#blue:hover{
+    background-color: rgba(0, 0, 255, 0.55);
+    /* border-color: blue; */
+}
+#red{
+    background-color: rgba(255, 0, 0, 0.35);
+}
+#red:hover{
+    background-color: rgba(255, 0, 0, 0.55);
+    /* border-color: red; */
+}
+.lineSize{
+    transition: 0.4s;
+    text-shadow: none;
+}
+.lineSize:hover{
+    background: rgb(197, 197, 197) !important;
 }
