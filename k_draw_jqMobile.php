@@ -57,7 +57,7 @@ echo <<<_BODY
     </fieldset>
 
     <br/>
-    <a id='reset' href="k_draw.php">Reset</a>
+    <a id='reset' href="k_draw_jqMobile.php" data-role="button" data-ajax="false">Reset</a>
 
 
         
