@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#gameArea{
+    max-width: 800px !important;
+    margin: 10px;
+    margin: auto;
+    /* background-color: rgb(238, 238, 238); */
+    /* box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.233); */
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+}
+
+form textarea{
+    min-height: 51px;
+    /* text-align: center; */
+}
+.ui-field-contain{
+    width: 100% !important;
+    text-align: center !important;
+}
+#submit{
+    margin: 0px;
+    margin: auto !important;
+    text-align: center !important;
+    width: 100% !important;
+    background: rgb(138, 226, 226);
+    border: 1px solid black;
+    transition: 0.2s;
+}
+#submit:hover{
+    background: rgb(125, 212, 212);
+}
+#outputArea{
+    background: rgb(255, 255, 195);
+    border: 1px solid rgb(189, 189, 189);
+}
+
+footer{
+    text-align: center;
+    border: none !important;
+}
+
+@media only screen and (min-width: 447px) {
+    .ui-field-contain{
+        width: 100% !important;
+        text-align: center !important;
+    }
+    label{
+        width: 100% !important;
+        text-align: center;
+    }
+
+}
+@media only screen and (min-width: 850px) {
+    .main{
+        background: rgba(255, 255, 255, 0);
+    }
+    h1{
+        font-size: 2em !important;
+        color: rgb(62, 62, 87);
+        margin-top: 0px;
+    }
+    body, #submit{
+        background: rgb(143, 242, 255) !important;
+    }
+    #submit:hover{
+        background: rgb(126, 210, 221) !important;
+    }
+    #submit{
+        width: 200px !important;
+        margin-left: 300px !important;
+    }
+    textarea{
+        background: rgb(255, 255, 195) !important;
+    }
+    #header, footer{
+        background: rgba(255, 184, 143, 0) !important;
+        border: 0px;
+    }
+    .ui-field-contain{
+        width: 100% !important;
+    }
+    
+    #gameArea{
+        background: rgb(255, 255, 255);
+        margin-top: 20px;
+        /* background-image: linear-gradient(white, white, white, rgba(255, 166, 0, 0.226)); */
+
+    }
+    
+    
+}

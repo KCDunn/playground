@@ -91,65 +91,67 @@ echo <<<_END
 	<meta name="author" content="Kevin Dunn">
 	<meta name="copyright" content="2020">
     
-    
-	<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
 	<link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" href="css/ecrypt.css">
-
-    
-	
-	
+    <link rel='stylesheet' href='jquery-mobile/jquery.mobile-1.4.5.min.css'>
+    <script src='js/jquery-2.2.4.min.js'></script>
+    <script src='jquery-mobile/jquery.mobile-1.4.5.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/encrpt-decrpt.css">
 
 </head>
 <body>
-<div class="main">
-
-
-
-<div id="gameArea">
+<div class="main" data-role="page">
+<div id="gameArea" class="ui-content">
 
 _END;
 
 echo <<<_END
-    <div id="switchCrypt">
-        <a id="thisPage" href="encryptMe.php" id="encrypt">Encrypt</a><a href="decryptMe.php" id="decrypt" class="off">Decrypt</a>
-        <br>
-        <br>
+    <div class="ui-field-contain">
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <a href="encryptMe.php" id="encrypt" class="ui-btn  ui-state-disabled ui-corner-all">Encrypt</a>
+            <a href="decryptMe.php" id="decrypt" class="off ui-btn ui-corner-all" data-transition="flip">Decrypt</a>
+        </fieldset>
+    </div>
+
+    <div id="header" data-role="header">
         <h1>Encrypt Me</h1>
-        <p>Write a secret message to encrypt!<p>
     </div>
 
     <form id="encrpt" method="post" action="encryptMe.php">
-    
-    <input style="width: 97%; height: 100px;" id="textInput" type="textarea" cols="200" rows="550" wrap="soft" name="encryptMessage">
-    <p>Enter a secret slide value</p>
-    <p class="enterNum">(between -20 and +20)</p>
-    <input type="number" name="shiftVal" min="-20" max="20">
-    <br>
-    <br>
-    <input type="submit" value="Encrypt" >
-
-        <div id="outputArea"><p id="textOutput">$output</p></div>
+        <div class="ui-field-contain>
+            <label for="encryptMessage">Write a message to encrypt:</label>
+            <textarea name="encryptMessage"></textarea>
+        </div>
+        
+        <div class="ui-field-contain">
+            <label for="slider">Slide to create a secret number<br>(between -20 and +20)<br>Use number for decrypting.<label>
+            <input type="range" name="shiftVal" value="1" min="-20" max="20">
+        </div>
+        <div class="ui-field-contain">
+            <label for="submit" class="ui-hidden-accessible">Encrypt Message</label>
+            <button type="submit" id="submit" class="ui-shadow ui-btn ui-corner-all ui-center">Encrypt</button>
+        </div>
+        
+        <div id="outputArea" class="ui-content">
+            $output
+        </div>
     </form>
-    <div id="cryptBottom">
-        <p>Encrypted message will apear above</p>
-    </div>
 
 <br>
-    
-
 
 _END;
-
-
 
 echo <<<_END
     
+    
+    <footer data-role='footer'>
+    <a href="index.php" class="ui-btn" data-ajax="false">Back to Playground</button></a>
+        <h4>Web App created by <a href='http://www.kevincdunn.com' target='_blank'>kevincdunn.com</a></h4>
+    </footer>
     </div>
 </div>
-
+</body>
+</html>
 _END;
 
-require_once 'footer.php';
 ?>
