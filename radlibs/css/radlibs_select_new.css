@@ -28,7 +28,7 @@ h1{
 }
 .game_theme{
     font-family: 'Roboto', sans-serif;
-    height: 400px;
+    height: 325px;
     /* max-width: 500px; */
     background-color: rgb(165, 233, 236);
     background-blend-mode: color-dodge;

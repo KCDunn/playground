@@ -18,11 +18,9 @@ echo <<<_END
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
 
-    <link rel='stylesheet' href='jquery-mobile/jquery.mobile-1.4.5.min.css'>
     <link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/gamelist.css">
-    <script src="js/jquery-3.5.0.min.js"></script>
-    <script> src='jquery-mobile/jquery.mobile-1.4.5.min.js'</script>
+    <script src="js/jquery-2.2.4.min.js"></script>
     <script>
         $(document).ready(function(){
             $(document.body).ready(function() {
@@ -50,17 +48,12 @@ echo <<<_END
 </head>
 <body>
 
-<div data-role='page' id="wrapper" class="container">
+<div data-role='page' id="wrapper" class="container ui-content">
 <h1 id="title"><a href="../kevincdunn"><span>KCD's</span></a> PLAYGROUND!</h1>
 
     <div data-role='content' id="main" class='card-columns'>
 
-        <script>
-            
-            document.getElementById('main').style.opacity = '0';
-            document.getElementById('title').style.opacity = '0';
-            document.getElementById('footer').style.opacity = '0';
-        </script>
+        
         
         <div class='card bg-light'>
             <div class="game_item card-body text-center">
@@ -82,7 +75,7 @@ echo <<<_END
             <div class="game_item card-body text-center">
                 <h2 class='card-title'>K Draw</h2>
                 <p class='card-text'>Make some Art <br>or just scrible!</p>
-                <a class="go_to link btn btn-block btn-secondary stretched-link" href="k_draw.php">Play</a>
+                <a class="go_to link btn btn-block btn-secondary stretched-link" href="k_draw_jqMobile.php" data-transition="slide">Play</a>
             </div>
         </div>
 
@@ -90,7 +83,7 @@ echo <<<_END
             <div class="game_item card-body text-center">
                 <h2 class='card-title'>Encrypt Me</h2>
                 <p class='card-text'>Encrypt or Decrypt messages sent between you and your conspiracy friends!</p>
-                <a class="go_to link btn btn-block btn-secondary stretched-link" href="encryptMe.php">Play</a>
+                <a class="go_to link btn btn-block btn-secondary stretched-link" href="encryptMe.php" data-transition="fade">Play</a>
                 
             </div>
         </div>
@@ -130,7 +123,7 @@ echo <<<_END
     </script>
 
     <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="bootstrap-4.5.0-dist/js/bootstrap.min.css"></script>
+    <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
